@@ -35,38 +35,24 @@ namespace DevEduc_all1_6
             return (s1, s2);     
         }
 
-        static void Task4()
+        public static double Task4(int a , int b , int c)
         {
-            Console.WriteLine("Введите целое число A:");
-            int a = Convert.ToInt32(Console.ReadLine());
-            Console.WriteLine("Введите целое число B:");
-            int b = Convert.ToInt32(Console.ReadLine());
-            Console.WriteLine("Введите целое число C:");
-            int c = Convert.ToInt32(Console.ReadLine());
             double x = (double)(c - b) / a;
-
-            Console.WriteLine($"X Равен: {x}");
+            return x; 
         }
 
-        static void Task5()
+        public static (int, int) Task5(int x1, int y1, int x2, int y2)
         {
             // Задание *1
 
-            Console.WriteLine("Введите целое число x1:");
-            int x1 = Convert.ToInt32(Console.ReadLine());
-            Console.WriteLine("Введите целое число y1:");
-            int y1 = Convert.ToInt32(Console.ReadLine());
-            Console.WriteLine("Введите целое число x2:");
-            int x2 = Convert.ToInt32(Console.ReadLine());
-            Console.WriteLine("Введите целое число y2:");
-            int y2 = Convert.ToInt32(Console.ReadLine());
             // Вичисляем по Формуле углового коэффициента прямой k = (Y2 — Y1) / (X2 — X1)
             int a = y2 - y1;
             int b = x2 - x1;
-            Console.WriteLine($"y = {a}*x + {b}");
+
+            return (a, b);
         }
 
-        static void Task6()
+        public static (double, double, double, bool) Task6(int a, int b, int c)
         {
             // Задание *2
 
@@ -75,28 +61,24 @@ namespace DevEduc_all1_6
             //int b = 10;
             //int c = 7;
 
-            Console.WriteLine("Введите целое число a:");
-            int a = Convert.ToInt32(Console.ReadLine());
-            Console.WriteLine("Введите целое число b:");
-            int b = Convert.ToInt32(Console.ReadLine());
-            Console.WriteLine("Введите целое число c:");
-            int c = Convert.ToInt32(Console.ReadLine());
+            bool flag = true;
+            double x1 = 0;
+            double x2 = 0;
 
             // Вычисление Дискриминанта
             double D = Math.Pow(b, 2) - 4 * a * c;
             if (D > 0)
             {
                 // Вычисление корней
-                double x1 = (-b + Math.Sqrt(D)) / 2 * a;
-                double x2 = (-b - Math.Sqrt(D)) / 2 * a;
-                Console.WriteLine($"Дискриминант: {D}");
-                Console.WriteLine($"Корень x1: {x1}");
-                Console.WriteLine($"Корень x2: {x2}");
+                x1 = (-b + Math.Sqrt(D)) / 2 * a;
+                x2 = (-b - Math.Sqrt(D)) / 2 * a;
             }
             else
             {
-                Console.WriteLine("Дискриминант меньше 0. Введите другие числа.");
+                flag = false;
+               
             }
+            return (D, x1, x2, flag);
         }
     }
 }
