@@ -8,131 +8,110 @@ namespace DevEduc_all1_6
 {
     class Homework3
     {
-        static void Task1()
+        public static double Task1(double a, double b)
         {
-            Console.WriteLine("Введите число A: ");
-            double a = Convert.ToDouble(Console.ReadLine());
-            Console.WriteLine("Введите число B: ");
-            double b = Convert.ToDouble(Console.ReadLine());
+            double c;
             if (a > b)
             {
-                Console.WriteLine($"Результат: {a + b}");
+                c = a + b;
+                return c;
             }
             else if (a < b)
             {
-                Console.WriteLine($"Результат: {a - b}");
+                c = a - b;
+                return c;
             }
             else
             {
-                Console.WriteLine($"Результат: {a * b}");
+                c = a * b;
+                return c;
             }
         }
 
-        static void Task2()
+        public static string Task2(double x, double y)
         {
-            Console.WriteLine("Введите число X: ");
-            double x = Convert.ToDouble(Console.ReadLine());
-            Console.WriteLine("Введите число Y: ");
-            double y = Convert.ToDouble(Console.ReadLine());
             if (x > 0 && y > 0)
-            {
-                Console.WriteLine("Результат: 1 четверть");
+            {   
+                return "Результат: 1 четверть";
+                
             }
             else if (x < 0 && y > 0)
             {
-                Console.WriteLine("Результат: 4 четверть");
+                return "Результат: 4 четверть";
             }
             else if (x < 0 && y < 0)
             {
-                Console.WriteLine("Результат: 3 четверть");
+                return "Результат: 3 четверть";
             }
             else if (x > 0 && y < 0)
             {
-                Console.WriteLine("Результат: 2 четверть");
+                return "Результат: 2 четверть";
             }
             else
             {
-                Console.WriteLine(
-                "Вы указали 0 в одном из координат. По этому определить четверть затруднительно.");
+                return 
+                    "Вы указали 0 в одном из координат. По этому определить четверть затруднительно.";
             }
         }
-        static void Task3()
+        public static string Task3( double a, double b, double c )
         {
-            Console.WriteLine("Введите число A: ");
-            double a = Convert.ToDouble(Console.ReadLine());
-            Console.WriteLine("Введите число B: ");
-            double b = Convert.ToDouble(Console.ReadLine());
-            Console.WriteLine("Введите число C: ");
-            double c = Convert.ToDouble(Console.ReadLine());
-
-
             if ((a > b && a > c) && (b > c))
             {
-                Console.WriteLine($"Результат: {a}, {b}, {c}");
+                return $"Результат: {a}, {b}, {c}";
             }
             else if (a > b && a < c)
             {
-                Console.WriteLine($"Результат: {c}, {a}, {b}");
+                return $"Результат: {c}, {a}, {b}";
             }
             else if (a > b && b < c)
             {
-                Console.WriteLine($"Результат: {a}, {c}, {b}");
+                return $"Результат: {a}, {c}, {b}";
             }
             else if ((a < b && a < c) && (b > c))
             {
-                Console.WriteLine($"Результат: {b}, {c}, {a}");
+                return $"Результат: {b}, {c}, {a}";
             }
             else if ((a < b && a < c) && (b < c))
             {
-                Console.WriteLine($"Результат: {c}, {b}, {a}");
+                return $"Результат: {c}, {b}, {a}";
             }
             else if (a < b && a > c)
             {
-                Console.WriteLine($"Результат: {b}, {a}, {c}");
+                return $"Результат: {b}, {a}, {c}";
             }
             else if (a == b || a == c || b == c)
             {
-                Console.WriteLine("Есть равные числа! Нет возможности их приритета!");
+                return "Есть равные числа! Нет возможности их приритета!";
             }
             else
             {
-                Console.WriteLine("Error");
+                return "Error";
             }
         }
-        static void Task4()
+        public static string Task4(double a, double b, double c)
         {
-            Console.WriteLine("Введите число A: ");
-            double a = Convert.ToDouble(Console.ReadLine());
-            Console.WriteLine("Введите число B: ");
-            double b = Convert.ToDouble(Console.ReadLine());
-            Console.WriteLine("Введите число C: ");
-            double c = Convert.ToDouble(Console.ReadLine());
-
             // Поиск дискриминанта.
             double D = Math.Pow(b, 2) - 4 * a * c;
 
             if (D < 0)
             {
-                Console.WriteLine("Корней уровнения нет");
+                return "Корней уровнения нет";
             }
             else if (D == 0)
             {
                 double x = (-b + Math.Sqrt(D)) / 2 * a;
-                Console.WriteLine($"Корень уровнения: {x}");
+                return $"Корень уровнения: {x}";
             }
             else
             {
                 double x1 = (-b + Math.Sqrt(D)) / 2 * a;
                 double x2 = (-b - Math.Sqrt(D)) / 2 * a;
-                Console.WriteLine($"2 корня уровнения: {x1} и {x2}");
-
+                return $"2 корня уровнения: {x1} и {x2}";
             }
         }
 
-        static void Task5()
+        public static string Task5(int x)
         {
-            Console.WriteLine("Введите целое двухзначеное число.");
-            int x = Convert.ToInt32(Console.ReadLine());
             // Получаем два отдельных числа.
             int num1 = x / 10;
             int num2 = x % 10;
@@ -147,32 +126,32 @@ namespace DevEduc_all1_6
                     switch (num2)
                     {
                         case 1:
-                            Console.WriteLine("Одиннадцать");
-                            break;
+                            return "Одиннадцать";
+
                         case 2:
-                            Console.WriteLine("Двенадцать");
-                            break;
+                            return "Двенадцать";
+
                         case 3:
-                            Console.WriteLine("Тринадцать");
-                            break;
+                            return "Тринадцать";
+
                         case 4:
-                            Console.WriteLine("Четырнадцать");
-                            break;
+                            return "Четырнадцать";
+
                         case 5:
-                            Console.WriteLine("Пятнадцать");
-                            break;
+                            return "Пятнадцать";
+
                         case 6:
-                            Console.WriteLine("Шестнадцать");
-                            break;
+                            return "Шестнадцать";
+
                         case 7:
-                            Console.WriteLine("Семнадцать");
-                            break;
+                            return "Семнадцать";
+
                         case 8:
-                            Console.WriteLine("Восемнадцать");
-                            break;
+                            return "Восемнадцать";
+
                         case 9:
-                            Console.WriteLine("Девятнадцать");
-                            break;
+                            return "Девятнадцать";
+
                     }
                     break;
                 case 2:
@@ -208,8 +187,7 @@ namespace DevEduc_all1_6
                     flag = true;
                     break;
                 default:
-                    Console.WriteLine("Введено не целое, либо не двузначное число.");
-                    break;
+                    return "Введено не целое, либо не двузначное число.";
             }
 
             string resNum2 = "";
@@ -245,29 +223,23 @@ namespace DevEduc_all1_6
             }
             if (flag)
             {
-                Console.WriteLine($"--------\nОтвет: {resNum1} {resNum2}");
+                return $"--------\nОтвет: {resNum1} {resNum2}";
             }
+            return ""; // Заглушка.
         }
 
-        static void Task6()
+        public static string Task6(double a, double b, double c)
         {
-            Console.WriteLine("Введите число A: ");
-            double a = Convert.ToDouble(Console.ReadLine());
-            Console.WriteLine("Введите число B: ");
-            double b = Convert.ToDouble(Console.ReadLine());
-            Console.WriteLine("Введите число C: ");
-            double c = Convert.ToDouble(Console.ReadLine());
-
             // формула взята:
             // https://colibrus.ru/suschestvuyuschie-treugolniki/
 
             if (a * b + b * c > a * c && a * c + b * c > a * b && a * b + a * c > b * c)
             {
-                Console.WriteLine("Треугольник есть");
+                return "Треугольник есть";
             }
             else
             {
-                Console.WriteLine("Треугольника нет");
+                return "Треугольника нет";
             }
         }
     }
