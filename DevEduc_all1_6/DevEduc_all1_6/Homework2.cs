@@ -9,38 +9,36 @@ namespace DevEduc_all1_6
     class Homework2
     {
 
-        static void Task1()
+        public static (int,int,int,int) Task1()
         {
             // Задание 1
             const int mainNumber = 876;
             int number1 = mainNumber % 10;
             int number2 = (mainNumber % 100) / 10;
             int number3 = mainNumber / 100;
-            Console.WriteLine($"{mainNumber} = {number1 + number2 + number3} ({number3}+{number2}+{number1})");
+            return (mainNumber, number1, number2, number3);
+            
         }
 
-        static void Task2()
+        public static bool Task2(double x1, double y1)
         {
             // Задание 2
-            Console.WriteLine("Введите целое число координат x");
-            double x1 = Convert.ToDouble(Console.ReadLine());
-            Console.WriteLine("Введите целое число координат y");
-            double y1 = Convert.ToDouble(Console.ReadLine());
+
             const int R = 40;
             bool shot = Math.Pow(x1, 2) + Math.Pow(y1, 2) <= Math.Pow(R, 2);
-            Console.WriteLine(shot);
+            return shot;
         }
 
-        static void Task3()
+        public static (int, bool) Task3(int number)
         {
             // Задание 3
-            Console.WriteLine("Введите целое трехзначное число");
-            int number = Convert.ToInt32(Console.ReadLine());
+
             int numberFirst = number / 100;
             int numberCenter = (number % 100) / 10;
             int numberLast = number % 10;
             bool result = numberCenter <= numberFirst && numberCenter > numberLast;
-            Console.WriteLine($"{number} ({result})");
+            return (number, result);
+           
         }
 
         static void Task4()

@@ -36,7 +36,7 @@ namespace DevEduc_all1_6
         }
 
         public static double Task4(int a , int b , int c)
-        {
+        {       // Задание 4 
             double x = (double)(c - b) / a;
             return x; 
         }
