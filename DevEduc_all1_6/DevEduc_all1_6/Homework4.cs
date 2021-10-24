@@ -8,27 +8,20 @@ namespace DevEduc_all1_6
 {
     class Homework4
     {
-        static void Task1()
+        public static void Task1(double A)
         {
-            Console.WriteLine("Введите число A: ");
-            double A = Convert.ToDouble(Console.ReadLine());
-            Console.WriteLine("-----------");
             for (int i = 1; i < 1000; i++)
             {
                 double res = i % A;
                 if (res == 0)
-                {
+                {   // Тут колхоз получается. Array определить не могу подлине, а List еще нельзя.
                     Console.WriteLine(i);
                 }
             }
         }
 
-        static void Task2()
+        public static int Task2(double A)
         {
-            Console.WriteLine("Введите число A: ");
-            double A = Convert.ToDouble(Console.ReadLine());
-            Console.WriteLine("-----------");
-
             double n = 0;
             int count = 1;
 
@@ -42,18 +35,16 @@ namespace DevEduc_all1_6
                 }
             }
             // -1 из-за лишней итерации цифры равной или близкой введеной А. 
-            Console.WriteLine(count - 1);
+            count--;
+            return count;
 
             // РЕШЕНИЕ БЕЗ ЦИКЛА
             //int g = (int)Math.Sqrt(A);
             //Console.WriteLine(g);
         }
 
-        static void Task3()
+        public static int Task3(double A)
         {
-            Console.WriteLine("Введите число A: ");
-            double A = Convert.ToDouble(Console.ReadLine());
-            Console.WriteLine("-----------");
             int res = 0;
             for (int i = 1; i < A; i++)
             {
@@ -63,15 +54,11 @@ namespace DevEduc_all1_6
                     res = i;
                 }
             }
-            Console.WriteLine($"Наибольший делитель: {res}");
+            return res;
         }
 
-        static void Task4()
+        public static int Task4(double a, double b)
         {
-            Console.WriteLine("Введите число A: ");
-            double a = Convert.ToDouble(Console.ReadLine());
-            Console.WriteLine("Введите число B: ");
-            double b = Convert.ToDouble(Console.ReadLine());
             int res = 0;
             if (b < 0)
             {
@@ -97,19 +84,13 @@ namespace DevEduc_all1_6
             }
             else
             {
-                Console.WriteLine("Введен обратный диапазон! ERROR!");
+                return -0; // ERROR
             }
-            Console.WriteLine("____");
-            Console.WriteLine($"Сумма чисел: {res}");
+            return res;
         }
 
-        static void Task5()
+        public static double Task5(double a, double b)
         {
-            Console.WriteLine("Введите число A: ");
-            double a = Convert.ToDouble(Console.ReadLine());
-            Console.WriteLine("Введите число B: ");
-            double b = Convert.ToDouble(Console.ReadLine());
-
             while (a != 0 && b != 0)
             {
                 if (a > b)
@@ -121,18 +102,16 @@ namespace DevEduc_all1_6
                     b = (int)b % (int)a;
                 }
             }
-            Console.WriteLine(a + b);
+            double c = a + b;
+            return c;
         }
 
-        static void Task6()
+        public static int Task6(int N)
         {
-            Console.WriteLine("Введите любое целое число");
-            int N = Convert.ToInt32(Console.ReadLine());
-            double res = Math.Pow(N, 3); // умнжение чила на куб
+            double res = Math.Pow(N, 3); // умножение чила на куб
             int leftLimit = 0; // Левый предел
             int rightLimit = (int)res; // правый предел
             int center = 0; // число в центре
-
 
             while (center != N)
             {
@@ -146,13 +125,11 @@ namespace DevEduc_all1_6
                     leftLimit = center;
                 }
             }
-            Console.WriteLine($"Загаданное число = {center}");
+            return center; 
         }
 
-        static void Task7()
+        public static void Task7(int a)
         {
-            Console.WriteLine("Введите целое число от 5 до 8 цифр");
-            int a = Convert.ToInt32(Console.ReadLine());
             int len = 0;
             int num = a; // присваиваем для дальнейшего использования в цикле.
 
@@ -172,7 +149,7 @@ namespace DevEduc_all1_6
                 f *= 10;
                 double formula = (num / f) % 10; // формула для отделения цифр по 1 шт.
                 if ((int)formula % 2 != 0)
-                {
+                {   // тут нужен LIST.
                     Console.WriteLine($"Нечетное {(int)formula}");
                     count++;
                 }
@@ -183,11 +160,8 @@ namespace DevEduc_all1_6
 
         }
 
-        static void Task8()
+        public static int Task8(int number)
         {
-
-            Console.Write("Введите любое целое число: ");
-            int number = Convert.ToInt32(Console.ReadLine());
             int result = 0;
             while (number > 0)
             {
@@ -195,17 +169,11 @@ namespace DevEduc_all1_6
                 result += number % 10;
                 number /= 10;
             }
-            Console.WriteLine(result);
+            return result;
         }
 
-        static void Task9()
+        public static void Task9(int a)
         {
-
-
-            Console.WriteLine("Введите целое число");
-            int a = Convert.ToInt32(Console.ReadLine());
-            Console.WriteLine("----------");
-
             int len = 0;
             int num = a; // присваиваем для дальнейшего использования в цикле.
             double f = 1; // переменная f для деления в формуле.
@@ -242,14 +210,8 @@ namespace DevEduc_all1_6
             }
         }
 
-        static void Task10()
+        public static void Task10(int a, int b)
         {
-            Console.WriteLine("Введите целое число");
-            int a = Convert.ToInt32(Console.ReadLine());
-            Console.WriteLine("Введите целое число");
-            int b = Convert.ToInt32(Console.ReadLine());
-            Console.WriteLine("----------");
-
             int len_a = 0;
             int num_a = a; // присваиваем для дальнейшего использования в цикле.
             int x = b;

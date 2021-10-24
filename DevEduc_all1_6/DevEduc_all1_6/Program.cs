@@ -183,7 +183,95 @@ namespace DevEduc_all1_6
 
             ////******************************************
             //// Homework 4
+
+            //// Task 1
+            //// Уточнить по решению! Получается криво.
+            //double input_4_1 = IOHelper.InputDouble("Введите число A: ");
+            //Console.WriteLine("-----------");
+            //Homework4.Task1(input_4_1);
+            //Console.ReadKey();
+            //Console.Clear();
+
+            //// Task 2 
+            //double input_4_2 = IOHelper.InputDouble("Введите число A: ");
+            //Console.WriteLine("-----------");
+            //int res_4_2 = Homework4.Task2(input_4_2);
+            //Console.WriteLine(res_4_2);
+            //Console.ReadKey();
+            //Console.Clear();
+
+            //// Task 3 
+            //double input_4_3 = IOHelper.InputDouble("Введите число A: ");
+            //Console.WriteLine("-----------");
+            //int res_4_3 = Homework4.Task3(input_4_3);
+            //Console.WriteLine($"Наибольший делитель: {res_4_3}");
+            //Console.ReadKey();
+            //Console.Clear();
+
+            // Task 4
+            //double input_4_4 = IOHelper.InputDouble("Введите число A: ");
+            //double input_4_4_1 = IOHelper.InputDouble("Введите число B: ");
+            //int res_4_4 = Homework4.Task4(input_4_4, input_4_4_1);
+            //if(res_4_4 == -0)
+            //{
+            //    Console.WriteLine("Введен обратный диапазон! ERROR!");
+            //}
+            //else
+            //{
+            //    Console.WriteLine("____");
+            //    Console.WriteLine($"Сумма чисел: {res_4_4}");
+            //}
+            //Console.ReadKey();
+            //Console.Clear();
+
+            //// Task 5
+            //double input_4_5 = IOHelper.InputDouble("Введите число A: ");
+            //double input_4_5_1 = IOHelper.InputDouble("Введите число B: ");
+            //double res_4_5 = Homework4.Task5(input_4_5, input_4_5_1);
+            //Console.WriteLine($"Наибольший делитель: {res_4_5}");
+            //Console.ReadKey();
+            //Console.Clear();
+
+            // Task 6
+            //int input_4_6 = IOHelper.InputInt("Введите любое целое число: ");
+            //int res_4_6 = Homework4.Task6(input_4_6);
+            //Console.WriteLine($"Загаданное число = {res_4_6}");
+            //Console.ReadKey();
+            //Console.Clear();
+
+            //// Task 7 
+            //int input_4_7 = IOHelper.InputInt("Введите целое число от 5 до 8 цифр");
+            //Homework4.Task7(input_4_7);
+            //// Тут нужен LIST для работы. Уточнить по его использованию.
+            //Console.ReadKey();
+            //Console.Clear();
+
+            //// Task 8
+            //int input_4_8 = IOHelper.InputInt("Введите любое целое число: ");
+            //int res_4_8 = Homework4.Task8(input_4_8);
+            //Console.WriteLine(res_4_8);
+            //Console.ReadKey();
+            //Console.Clear();
+
+            //// Task 9
+            //int input_4_9 = IOHelper.InputInt("Введите целое число: ");
+            //Console.WriteLine("----------");
+            //Homework4.Task9(input_4_9);
+            //// Нужен вновь LIST.
+            ////Console.ReadKey();
+            ////Console.Clear();
+
+
+            //// Task 10
+            //int input_4_10 = IOHelper.InputInt("Введите целое число: ");
+            //int input_4_10_1 = IOHelper.InputInt("Введите еще целое число: ");
+            //Console.WriteLine("----------");
+            //Homework4.Task10(input_4_10, input_4_10_1);
+            //// Нужен вновь LIST.
             
+
+            ////******************************************
+            //// Homework 5
         }
     }
 }
