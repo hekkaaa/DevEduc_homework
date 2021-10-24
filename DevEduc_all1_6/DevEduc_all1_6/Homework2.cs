@@ -41,21 +41,20 @@ namespace DevEduc_all1_6
            
         }
 
-        static void Task4()
+        public static (int,int) Task4 (int mainNumber)
         {
             // Задание 4
-            Console.WriteLine("Введите целое трехзначное число");
-            int mainNumber = Convert.ToInt32(Console.ReadLine());
+          
             // Разделяем цифры по одному.
             int number3 = mainNumber % 10;
             int number2 = (mainNumber % 100) / 10;
             int number1 = mainNumber / 100;
             int result = number3 * 100 + number2 * 10 + number1;
-            Console.WriteLine($"{mainNumber} -> {result}");
+            return (mainNumber, result);
 
         }
 
-        static void Task5()
+        public static (double,bool) Task5()
         {
             // Задание 5
             // В задании условия запроса от пользователя нет. По этому хардкод.
@@ -63,7 +62,8 @@ namespace DevEduc_all1_6
             bool res = number == (int)number;
             // Цифру 123.0 double обрезает 0 на выводе до целого числа.
             // И к сожаления не получается как в задании. 
-            Console.WriteLine($"{number} ({res})");
+            return (number, res);
+            
 
         }
     }

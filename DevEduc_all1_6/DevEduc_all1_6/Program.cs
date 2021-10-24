@@ -6,6 +6,13 @@ namespace DevEduc_all1_6
     {
         static void Main(string[] args)
         {
+            //******************************************
+            // AHTUNG!!! Начиная с Homework2 идет нейминг переменных по следующей логике:
+            // <name>_2(номер homework)_1(номер Task)_3(номер если подобных переменных нужно более 1шт)
+            // СДЕЛАНО Т.К РАЗОМ ВСЕ НЕ ЗАРАБОТАЕТ. УВЫ НА МЕТОДЫ НЕ РАЗБИТЬ.
+            //******************************************
+
+
             // Homework1
 
             //// Task1
@@ -68,32 +75,49 @@ namespace DevEduc_all1_6
             //{
             //    Console.WriteLine("Дискриминант меньше 0. Введите другие числа.");
             //}
-
+            //Console.ReadKey();
+            //Console.Clear();
 
             //******************************************
             // Homework 2
 
-            //// Task 1
-            //var res_2 = Homework2.Task1();
-            //Console.WriteLine($"{res_2.Item1} = {res_2.Item2 + res_2.Item3 + res_2.Item4} ({res_2.Item4}+{res_2.Item3}+{res_2.Item2})");
+            // Task 1
+            var res_2_1 = Homework2.Task1();
+            Console.WriteLine($"{res_2_1.Item1} = {res_2_1.Item2 + res_2_1.Item3 + res_2_1.Item4} ({res_2_1.Item4}+{res_2_1.Item3}+{res_2_1.Item2})");
+            Console.ReadKey();
+            Console.Clear();
 
-            ////Task 2
+            //Task 2
 
-            //double input_2 = IOHelper.InputDouble("Введите целое число координат x");
-            //double input_2_1 = IOHelper.InputDouble("Введите целое число координат y");
-            //bool res_2 = Homework2.Task2(input_2, input_2_1);
-            //Console.WriteLine(res_2);
+            double input_2 = IOHelper.InputDouble("Введите целое число координат x");
+            double input_2_2 = IOHelper.InputDouble("Введите целое число координат y");
+            bool res_2_2 = Homework2.Task2(input_2, input_2_2);
+            Console.WriteLine(res_2_2);
+            Console.ReadKey();
+            Console.Clear();
 
-            //// Task 3
+            // Task 3
 
-            //int input_3 = IOHelper.InputInt("Введите целое трехзначное число");
-            //var res_3 = Homework2.Task3(input_3);
-            //Console.WriteLine($"{res_3.Item1} ({res_3.Item2})");
-
+            int input_2_3 = IOHelper.InputInt("Введите целое трехзначное число");
+            var res_2_3 = Homework2.Task3(input_2_3);
+            Console.WriteLine($"{res_2_3.Item1} ({res_2_3.Item2})");
+            Console.ReadKey();
+            Console.Clear();
 
             // Task 4
 
+            int input_2_4 = IOHelper.InputInt("Введите целое трехзначное число");
+            var res_4 = Homework2.Task4(input_2_4);
+            Console.WriteLine($"{res_4.Item1} -> {res_4.Item2}");
+            Console.ReadKey();
+            Console.Clear();
 
+            // Task 5
+            // В задании условия запроса от пользователя нет. По этому хардкод.
+            var res_2_5 = Homework2.Task5();
+            Console.WriteLine($"{res_2_5.Item1} ({res_2_5.Item2})");
+            Console.ReadKey();
+            Console.Clear();
         }
     }
 }
