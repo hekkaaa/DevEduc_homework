@@ -9,23 +9,9 @@ namespace DevEduc_all1_6
     class Homework5
     {
         static Random rnd = new Random();
-        static void Task1()
+        public static (int,int) Task1(int[] mas)
         {   // Задание 1
-            rnd.Next(1, 2);
-            // Создание и наполнение массива.
-            // Оно будет повторятся в подобных заданиях отдельно СПЕЦИАЛЬНО.
-            int[] mas = new int[10];
-            Console.Write("Массив: ");
-            for (int i = 0; i < mas.Length; i++)
-            {
-                mas[i] = rnd.Next(1, 100);
-
-                Console.Write($"{mas[i]} "); // Выводим информацию о массиве.
-            }
-            Console.WriteLine();
-            // *****
-
-
+          
             // Посчет четных и нечетных чисел.
             int countEven = 0;
             int countOdd = 0;
@@ -42,25 +28,11 @@ namespace DevEduc_all1_6
                     countOdd++;
                 }
             }
-
-            Console.WriteLine($"Четных: {countEven}\nНечетных: {countOdd}");
+            return (countEven, countOdd);
         }
 
-        static void Task2()
+        public static void Task2(int[] mas)
         {   // Задание 2
-
-            // Создание и наполнение массива.
-            // Оно будет повторятся в подобных заданиях отдельно СПЕЦИАЛЬНО.
-            int[] mas = new int[40];
-            Console.Write("Массив: ");
-            for (int i = 0; i < mas.Length; i++)
-            {
-                mas[i] = rnd.Next(1, 100);
-
-                Console.Write($"{mas[i]} "); // Выводим информацию о массиве.
-            }
-            Console.WriteLine();
-            // *****
 
             for (int i = 2; i < mas.Length; i += 2)
             {
@@ -71,33 +43,18 @@ namespace DevEduc_all1_6
             }
         }
 
-        static void Task3()
-        {   // Задание 3
-            int[] a = { 1, 2, 3, 4, 5 };
-            int[] b = { 6, 7, 8, 9, 10 };
+        public static int[] Task3( int[] a, int[] b)
+        {   // Задание 3       
 
             int[] z = new int[a.Length + b.Length]; // устанавливаем длинну
             a.CopyTo(z, 0);
             b.CopyTo(z, a.Length); // копируем с 5 индекса.
             // PROFIT!
+            return z;
         }
 
-        static void Task4()
+        public static int[] Task4(int[] mas)
         {   // Задание 4
-
-            // Создание и наполнение массива.
-            // Оно будет повторятся в подобных заданиях отдельно СПЕЦИАЛЬНО.
-            int randomIndex = rnd.Next(5, 20);
-            int[] mas = new int[randomIndex]; // рандомная длина массива в пределах 20.
-            Console.Write("Массив: ");
-            for (int i = 0; i < mas.Length; i++)
-            {
-                mas[i] = rnd.Next(1, 100);
-
-                Console.Write($"{mas[i]} "); // Выводим информацию о массиве.
-            }
-            Console.WriteLine();
-            // *****
 
             int center = mas.Length / 2; // получаем "условную" середину массив
             int[] resultMassive = new int[mas.Length]; // новый массив. 
@@ -117,57 +74,43 @@ namespace DevEduc_all1_6
                 resultMassive[count] = mas[i];
                 count++;
             }
-
-            Console.Write("Новый массив: ");
-            for (int i = 0; i < resultMassive.Length; i++)
-            {
-                Console.Write($"{resultMassive[i]} ");
-            }
+            return resultMassive;
+            
+           
         }
 
-        static void Task5()
+        public static (int[],int[]) Task5(int N)
         {
-            int N = 3; // количество смещений. Укажите нужное количество
             int count = 1; // счетчик.
+            // N - длина сдвига
 
             int[] mas = { 1, 2, 3, 4, 5, 6 };
-            int t = mas[mas.Length - 1];
+            int lastNum = mas[mas.Length - 1]; // Берем последнюю цифру в списке.
             for (int i = mas.Length - 1; i > 0; i--)
             {
                 mas[i] = mas[i - 1];
             }
-            mas[0] = t;
+            mas[0] = lastNum;
 
-            // Вывод информации в консоль
-            Console.Write("Со смещением на 1 позинию: ");
-            for (int i = 0; i < mas.Length; i++)
-            {
-                Console.Write($"{mas[i]} ");
-            }
-
+            // Копирование массива для корректного вывода через return вдух массивов.
+            int[] newmas = new int[mas.Length];
+            mas.CopyTo(newmas, 0);
 
             // Цикл для смещения
             while (count <= N)
             {
-                t = mas[mas.Length - 1];
-                for (int i = mas.Length - 1; i > 0; i--)
+                lastNum = newmas[newmas.Length - 1];
+                for (int i = newmas.Length - 1; i > 0; i--)
                 {
-                    mas[i] = mas[i - 1];
+                    newmas[i] = newmas[i - 1];
                 }
-                mas[0] = t;
+                newmas[0] = lastNum;
                 count++;
             }
-
-            Console.WriteLine(); // ENTER
-            Console.Write($"После смещений на N позиций: ");
-            // Вывод информации в консоль
-            for (int i = 0; i < mas.Length; i++)
-            {
-                Console.Write($"{mas[i]} ");
-            }
+            return (mas, newmas);
         }
 
-        static void Task6()
+        public static int[] Task6()
         { // Задание 6
             int[] mas = { 1, 2, 3, 4, 5, 6, 7, 8 };
             for (int i = 0; i < mas.Length; i += 2)
@@ -175,26 +118,18 @@ namespace DevEduc_all1_6
                 int tmp = mas[i];
                 mas[i] = mas[i + 1];
                 mas[i + 1] = tmp;
-
             }
-
-            Console.Write("Новый массив: ");
-            for (int i = 0; i < mas.Length; i++)
-            {
-                Console.Write($"{mas[i]} ");
-            }
-
-
+            return mas;
         }
 
-        static void Task7()
+        public static (int,int) Task7()
         { // Задача 7
 
             // В задаче указано что отрицательные значения будут ВКЛЮЧИТЕЛЬНО
-            int[] mas = { 5, 15, -2, 3, -1, 8, -10, 0, 1, 10, 4, -6, 1 };
-
+            int[] mas = { 5, 15, -2, 3, -1, 8, -10, 0, 1, 10, 4, -6, 1, 20 };
             int min = 0; // для поиска минимального значения.
             int res = 0; // для суммы чисел после 0
+
             for (int i = 0; i < mas.Length; i++)
             {   // ищем минимальное.
                 if (mas[i] < min)
@@ -211,28 +146,13 @@ namespace DevEduc_all1_6
                         count++;
                     }
                 }
-
             }
-            Console.WriteLine($"Сумма результата после 0 = {res}");
-            Console.WriteLine($"Минимально значение: {min}");
+            return (res, min);  
         }
 
-        static void Task8()
+        public static int[] Task8(int[] mas)
         {
             // Задание 8
-            // Создание и наполнение массива.
-            // Оно будет повторятся в подобных заданиях отдельно СПЕЦИАЛЬНО.
-            int[] mas = new int[10];
-            Console.Write("Массив: ");
-            for (int i = 0; i < mas.Length; i++)
-            {
-                mas[i] = rnd.Next(1, 100);
-
-                Console.Write($"{mas[i]} "); // Выводим информацию о массиве.
-            }
-            Console.WriteLine();
-            Console.Write("После:  ");
-            // *****
 
             for (int i = 1; i < mas.Length; i++)
             {
@@ -247,30 +167,12 @@ namespace DevEduc_all1_6
                     i--;
                 }
             }
-
-            for (int i = 0; i < mas.Length; i++)
-            {
-                Console.Write($"{mas[i]} ");
-            }
-
+            return mas;
         }
 
-        static void Task9()
+        public static int[] Task9(int[] mas)
         {
-            // Задание 8
-            // Создание и наполнение массива.
-            // Оно будет повторятся в подобных заданиях отдельно СПЕЦИАЛЬНО.
-            int[] mas = new int[10];
-            Console.Write("Массив: ");
-            for (int i = 0; i < mas.Length; i++)
-            {
-                mas[i] = rnd.Next(-10, 100);
-
-                Console.Write($"{mas[i]} "); // Выводим информацию о массиве.
-            }
-            Console.WriteLine();
-            Console.Write("После:  ");
-            // *****
+            // Задание 9
 
             for (int i = 0; i < mas.Length; i++)
             {
@@ -291,11 +193,7 @@ namespace DevEduc_all1_6
                 mas[i] = min_value; // а текущему i даем значение(литерал) найденого самого маленького из диапазона i - max.length
             }
 
-            // Вывод информации в консоль
-            for (int i = 0; i < mas.Length; i++)
-            {
-                Console.Write($"{mas[i]} ");
-            }
+            return mas;
         }
     }
 }
