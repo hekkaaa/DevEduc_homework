@@ -32,9 +32,9 @@ namespace DevEduc_all1_6
             return mas;
         }
 
-        static void Task1()
+        public static int[,] Task1(int[,] massive)
         {
-            int[,] massive = Massive(5, 8, -99, 40);
+            // Задание 1
 
             for (int i = 0; i < massive.GetLength(0); i++)
             {
@@ -50,22 +50,12 @@ namespace DevEduc_all1_6
                     }
                 }
             }
-
-            // Вывод информации о массиве
-            Console.WriteLine("\nРезультат: ");
-            for (int i = 0; i < massive.GetLength(0); i++)
-            {
-                for (int j = 0; j < massive.GetLength(1); j++)
-                {
-                    Console.Write($"{massive[i, j]}\t");
-                }
-                Console.WriteLine();
-            }
+            return massive;
         }
 
-        static void Task2()
+        public static int[,] Task2(int [,] mas)
         {
-            int[,] mas = new int[9, 9];
+            // Задание 2
 
             int factor = 0; // множитель.
 
@@ -74,29 +64,19 @@ namespace DevEduc_all1_6
                 factor++;
                 int number = 0; // обнуляем число прибавления каждый цикл.
                 number += factor;
+
                 for (int j = 0; j < mas.GetLength(1); j++)
                 {
                     mas[i, j] = mas[i, j] + number;
                     number += factor; // добавляем к тому что есть множитель для увеличения цифры.
                 }
             }
-
-            // Вывод информации о массиве
-            Console.WriteLine("\nРезультат: ");
-            for (int i = 0; i < mas.GetLength(0); i++)
-            {
-                for (int j = 0; j < mas.GetLength(1); j++)
-                {
-                    Console.Write($"{mas[i, j]}\t");
-                }
-                Console.WriteLine();
-            }
+            return mas;
         }
 
-        static void Task3()
+        public static int[,] Task3(int[,] mas)
         {   // Задание 3
 
-            int[,] mas = new int[8, 8]; // Если указать не симметричный размер 8 на 9 например, работать не будет нормально.
             bool black = true; // черная клетка да/нет
             for (int i = mas.GetLength(0) - 1; i >= 0; i--)
             {
@@ -118,21 +98,11 @@ namespace DevEduc_all1_6
                     }
                 }
             }
-            // вывод массива.
-            for (int i = 0; i < mas.GetLength(0); i++)
-            {
-                for (int j = 0; j < mas.GetLength(1); j++)
-                {
-                    Console.Write($"{mas[i, j]}\t");
-                }
-                Console.WriteLine();
-            }
+            return mas;
         }
 
-        static void Task4()
+        public static void Task4(int[,] massive)
         {
-            int[,] massive = Massive(5, 8, 0, 2);
-
             Console.WriteLine();
             Console.Write("Результат: ");
             for (int i = 0; i < massive.GetLength(0); i++)
@@ -167,7 +137,7 @@ namespace DevEduc_all1_6
             }
         }
 
-        static void Task5()
+        public static void Task5()
         {   // Задание 5
 
             // Создание таблицы 10 магазинов.
@@ -211,9 +181,8 @@ namespace DevEduc_all1_6
             }
         }
 
-        static void Task6()
+        public static int Task6(int[,] massive)
         {
-            var massive = Massive(12, 12, -10, 50);
             int count = 0;
             for (int i = 0; i < massive.GetLength(0); i++)
             {
@@ -229,16 +198,13 @@ namespace DevEduc_all1_6
 
                         if (massive[i, j] > summa) count++;
                     }
-
                 }
             }
-            Console.WriteLine($"\nРезультат: {count}");
+            return count;
         }
 
-        static void Task7()
+        public static int[,] Task7(int[,] mas)
         {   // Задание 7
-
-            int[,] mas = new int[7, 7]; // создание массива.
 
             for (int i = 0; i < mas.GetLength(0); i++)
             {
@@ -248,60 +214,41 @@ namespace DevEduc_all1_6
                     if (i <= mas.GetLength(0) - j - 1 && i <= j || i >= j && i >= mas.GetLength(0) - j - 1)
                     {
                         mas[i, j] = 1;
-                        Console.Write($"{mas[i, j]}\t");
                     }
                     else
                     {
                         mas[i, j] = 0;
-                        Console.Write($"{mas[i, j]}\t");
                     }
                 }
             }
+            return mas;
         }
 
-        static void Task8()
+        public static (int[,],bool) Task8(int[,] a, int[,] b)
         {   // Задание 8
+            bool flag_error = false;
+            // Создаем матрицу для складывания результата.
+            int[,] c = new int[a.GetLength(0), b.GetLength(1)];
 
-            // Массив наполняется автоматически рандомными цифрами.
-            var A = Massive(5, 5, 1, 20);
-            var B = Massive(5, 5, 1, 50);
-
-            if (A.GetLength(0) != B.GetLength(1))
+            if (a.GetLength(0) != b.GetLength(1))
             {
-                Console.WriteLine(" Матрицы не могут быть перемножены ");
+                flag_error = true;
+                return (c ,flag_error);
             }
             else
             {
-                // Создаем матрицу для складывания результата.
-                int[,] C = new int[A.GetLength(0), B.GetLength(1)];
-
                 // Старт алгоритма.
-                for (int i = 0; i < A.GetLength(0); i++)
+                for (int i = 0; i < a.GetLength(0); i++)
                 {
-                    for (int j = 0; j < B.GetLength(1); j++)
+                    for (int j = 0; j < b.GetLength(1); j++)
                     {
-                        for (int k = 0; k < B.GetLength(0); k++)
+                        for (int k = 0; k < b.GetLength(0); k++)
                         {
-                            Console.WriteLine($"{A[i, k]} * {B[k, j]}");
-                            C[i, j] += A[i, k] * B[k, j];
-                            Console.WriteLine(C[i, j]);
-                            Console.WriteLine("+++++");
-
+                            c[i, j] += a[i, k] * b[k, j];
                         }
                     }
                 }
-
-                // Вывод результата.
-                Console.WriteLine("Двумерный массив: ");
-                for (int i = 0; i < C.GetLength(0); i++)
-                {
-                    for (int j = 0; j < C.GetLength(1); j++)
-                    {
-
-                        Console.Write($"{C[i, j]}\t");
-                    }
-                    Console.WriteLine();
-                }
+                return (c, flag_error);
             }
 
         }

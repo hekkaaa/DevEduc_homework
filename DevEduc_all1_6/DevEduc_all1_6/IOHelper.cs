@@ -42,7 +42,36 @@ namespace DevEduc_all1_6
             }
             Console.WriteLine();
             return mas;
-            
+
+        }
+
+        // Двумерный рандомный массив.
+        public static int[,] array2DRandomInt(int line, int сolumns, int rangeStart, int rangeEnd)
+        {
+            // line - строка. сolumns - столбец 
+            // rangeStart - старт диапазона рандома. rangeEnd - конец
+
+            int[,] mas = new int[line, сolumns];
+
+            Console.WriteLine("Стартовый Двумерный массив: ");
+            for (int i = 0; i < mas.GetLength(0); i++)
+            {
+                for (int j = 0; j < mas.GetLength(1); j++)
+                {
+                    mas[i, j] = rnd.Next(rangeStart, rangeEnd);
+                    Console.Write($"{mas[i, j]}\t");
+                }
+                Console.WriteLine();
+            }
+            return mas;
+        }
+
+        // Пустой Двумерный рандомный массив.
+        public static int[,] Array2EmptyInt(int line, int сolumns)
+        {
+            // line - строка. сolumns - столбец 
+            int[,] mas = new int[line, сolumns];
+            return mas;
         }
 
         // Выводит в консоль массив в одну строчку.
@@ -51,6 +80,20 @@ namespace DevEduc_all1_6
             for (int i = 0; i < massive.Length; i++)
             {
                 Console.Write($"{massive[i]} ");
+            }
+        }
+
+        // Выводит в консоль двумерный массив.
+        public static void Write2DArray(int[,] massive) { 
+        // Вывод информации о массиве
+        Console.WriteLine("\nРезультат: ");
+            for (int i = 0; i<massive.GetLength(0); i++)
+            {
+                for (int j = 0; j<massive.GetLength(1); j++)
+                {
+                    Console.Write($"{massive[i, j]}\t");
+                }
+                Console.WriteLine();
             }
         }
 

@@ -274,7 +274,7 @@ namespace DevEduc_all1_6
             // Homework 5
 
             // Task1 
-            int[] input_5_1 = IOHelper.ArrayRandomInt(10, 1, 20);
+            int[] input_5_1 = IOHelper.ArrayRandomInt(20, 1, 20);
             var res_5_1 = Homework5.Task1(input_5_1);
             Console.WriteLine($"Четных: {res_5_1.Item1}\nНечетных: {res_5_1.Item2}");
             Console.ReadKey();
@@ -343,6 +343,69 @@ namespace DevEduc_all1_6
             int[] res_5_9 = Homework5.Task9(input_5_9);
             Console.Write("\nРезультат: ");
             IOHelper.WriteArray(res_5_9);
+            Console.ReadKey();
+            Console.Clear();
+
+            //******************************************
+            // Homework 6
+
+            // Task 1
+            int[,] res_6_1 = Homework6.Task1(IOHelper.array2DRandomInt(5, 8, -99, 40));
+            IOHelper.Write2DArray(res_6_1);
+            Console.ReadKey();
+            Console.Clear();
+
+            // Task 2
+            int[,] input_6_2 = new int[9, 9];
+            int[,] res_6_2 = Homework6.Task2(input_6_2);
+            IOHelper.Write2DArray(res_6_2);
+            Console.ReadKey();
+            Console.Clear();
+
+            // Task 3
+            // Если указать не симметричный размер 8 на 9 например, работать не будет нормально.
+            int[,] input_6_3 = new int[9, 9];
+            int[,] res_6_3 = Homework6.Task3(input_6_3);
+            IOHelper.Write2DArray(res_6_3);
+            Console.ReadKey();
+            Console.Clear();
+
+            // Task 4
+            Homework6.Task4(IOHelper.array2DRandomInt(5, 8, 0, 2));
+            Console.ReadKey();
+            Console.Clear();
+
+            // Task 5
+            Homework6.Task5();
+            Console.ReadKey();
+            Console.Clear();
+
+            // Task 6
+            int res_6_6 = Homework6.Task6(IOHelper.array2DRandomInt(12, 12, -10, 50));
+            Console.ForegroundColor = ConsoleColor.Green;
+            Console.WriteLine($"\nРезультат: {res_6_6}");
+            Console.ResetColor(); // сбрасываем в стандартный
+            Console.ReadKey();
+            Console.Clear();
+
+            // Task 7
+            int[,] res_6_7 = Homework6.Task7(IOHelper.Array2EmptyInt(7, 7));
+            IOHelper.Write2DArray(res_6_7);
+            Console.ReadKey();
+            Console.Clear();
+
+            // Task 8
+            int[,] input_6_8 = IOHelper.array2DRandomInt(5, 5, 1, 20);
+            int[,] input_6__1 = IOHelper.array2DRandomInt(5, 5, 1, 20);
+            var res_6_8 = Homework6.Task8(input_6_8, input_6__1);
+            if (res_6_8.Item2 == true)
+            {
+                Console.WriteLine("Матрицы не могут быть перемножены");
+            }
+            else
+            {
+                IOHelper.Write2DArray(res_6_8.Item1);
+            }
             Console.ReadKey();
             Console.Clear();
         }
