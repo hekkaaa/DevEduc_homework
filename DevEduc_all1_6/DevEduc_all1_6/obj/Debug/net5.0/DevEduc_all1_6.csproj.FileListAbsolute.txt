@@ -1,3 +1,7 @@
+D:\GitWork\DevEduc_homework\DevEduc_all1_6\DevEduc_all1_6\obj\Debug\net5.0\DevEduc_all1_6.GeneratedMSBuildEditorConfig.editorconfig
+D:\GitWork\DevEduc_homework\DevEduc_all1_6\DevEduc_all1_6\obj\Debug\net5.0\DevEduc_all1_6.AssemblyInfoInputs.cache
+D:\GitWork\DevEduc_homework\DevEduc_all1_6\DevEduc_all1_6\obj\Debug\net5.0\DevEduc_all1_6.AssemblyInfo.cs
+D:\GitWork\DevEduc_homework\DevEduc_all1_6\DevEduc_all1_6\obj\Debug\net5.0\DevEduc_all1_6.csproj.CoreCompileInputs.cache
 D:\GitWork\DevEduc_homework\DevEduc_all1_6\DevEduc_all1_6\bin\Debug\net5.0\DevEduc_all1_6.exe
 D:\GitWork\DevEduc_homework\DevEduc_all1_6\DevEduc_all1_6\bin\Debug\net5.0\DevEduc_all1_6.deps.json
 D:\GitWork\DevEduc_homework\DevEduc_all1_6\DevEduc_all1_6\bin\Debug\net5.0\DevEduc_all1_6.runtimeconfig.json
@@ -5,12 +9,7 @@ D:\GitWork\DevEduc_homework\DevEduc_all1_6\DevEduc_all1_6\bin\Debug\net5.0\DevEd
 D:\GitWork\DevEduc_homework\DevEduc_all1_6\DevEduc_all1_6\bin\Debug\net5.0\DevEduc_all1_6.dll
 D:\GitWork\DevEduc_homework\DevEduc_all1_6\DevEduc_all1_6\bin\Debug\net5.0\ref\DevEduc_all1_6.dll
 D:\GitWork\DevEduc_homework\DevEduc_all1_6\DevEduc_all1_6\bin\Debug\net5.0\DevEduc_all1_6.pdb
-D:\GitWork\DevEduc_homework\DevEduc_all1_6\DevEduc_all1_6\obj\Debug\net5.0\DevEduc_all1_6.GeneratedMSBuildEditorConfig.editorconfig
-D:\GitWork\DevEduc_homework\DevEduc_all1_6\DevEduc_all1_6\obj\Debug\net5.0\DevEduc_all1_6.AssemblyInfoInputs.cache
-D:\GitWork\DevEduc_homework\DevEduc_all1_6\DevEduc_all1_6\obj\Debug\net5.0\DevEduc_all1_6.AssemblyInfo.cs
-D:\GitWork\DevEduc_homework\DevEduc_all1_6\DevEduc_all1_6\obj\Debug\net5.0\DevEduc_all1_6.csproj.CoreCompileInputs.cache
 D:\GitWork\DevEduc_homework\DevEduc_all1_6\DevEduc_all1_6\obj\Debug\net5.0\DevEduc_all1_6.dll
 D:\GitWork\DevEduc_homework\DevEduc_all1_6\DevEduc_all1_6\obj\Debug\net5.0\ref\DevEduc_all1_6.dll
 D:\GitWork\DevEduc_homework\DevEduc_all1_6\DevEduc_all1_6\obj\Debug\net5.0\DevEduc_all1_6.pdb
 D:\GitWork\DevEduc_homework\DevEduc_all1_6\DevEduc_all1_6\obj\Debug\net5.0\DevEduc_all1_6.genruntimeconfig.cache
-D:\GitWork\DevEduc_homework\DevEduc_all1_6\DevEduc_all1_6\obj\Debug\net5.0\DevEduc_all1_6.csproj.AssemblyReference.cache

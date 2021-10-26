@@ -137,7 +137,7 @@ namespace DevEduc_all1_6
             }
         }
 
-        public static void Task5()
+        public static (double[], double[,]) Task5()
         {   // Задание 5
 
             // Создание таблицы 10 магазинов.
@@ -153,11 +153,9 @@ namespace DevEduc_all1_6
                     Console.Write($"{massive[i, j]:f2}\t");
                 }
             }
-
-            // Решение задачи.
-            Console.ForegroundColor = ConsoleColor.Green;
-            Console.WriteLine("\n\nРезультаты решения задачи:");
-            Console.ResetColor(); // сбрасываем в стандартный
+            // массывы для return
+            double[] mas_totalCash = new double[10];
+            double[,] mas_MinMax = new double[10, 6];
 
             for (int i = 0; i < massive.GetLength(0); i++)
             {
@@ -173,12 +171,12 @@ namespace DevEduc_all1_6
                     minCash = massive[i, j] < minCash ? minCash = massive[i, j] : minCash;
                     maxCash = massive[i, j] > maxCash ? maxCash = massive[i, j] : maxCash;
                 }
-
-                Console.WriteLine($"Магазин {i + 1} - " +
-                    $"Суммарный доход: {totalCash:f2}\t " +
-                    $"Средний доход: {totalCash / massive.GetLength(1):f2}\t " +
-                    $"Доход - Min:{minCash:f2} |  Max:{maxCash:f2}");
+                // фиксируем результаты.
+                mas_totalCash[i] = totalCash;
+                mas_MinMax[i, 0] = minCash;
+                mas_MinMax[i, 1] = maxCash;
             }
+            return (mas_totalCash, mas_MinMax);
         }
 
         public static int Task6(int[,] massive)

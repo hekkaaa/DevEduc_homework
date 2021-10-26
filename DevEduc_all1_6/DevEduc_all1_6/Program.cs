@@ -185,7 +185,6 @@ namespace DevEduc_all1_6
             // Homework 4
 
             // Task 1
-            // Уточнить по решению! Получается криво.
             double input_4_1 = IOHelper.InputDouble("Введите число A: ");
             Console.WriteLine("-----------");
             Homework4.Task1(input_4_1);
@@ -193,7 +192,7 @@ namespace DevEduc_all1_6
             Console.Clear();
 
             // Task 2 
-            double input_4_2 = IOHelper.InputDouble("Введите число A: ");
+            double input_4_2 = IOHelper.InputDouble("Введите число A");
             Console.WriteLine("-----------");
             int res_4_2 = Homework4.Task2(input_4_2);
             Console.WriteLine(res_4_2);
@@ -212,22 +211,17 @@ namespace DevEduc_all1_6
             double input_4_4 = IOHelper.InputDouble("Введите число A: ");
             double input_4_4_1 = IOHelper.InputDouble("Введите число B: ");
             int res_4_4 = Homework4.Task4(input_4_4, input_4_4_1);
-            if (res_4_4 == -0)
-            {
-                Console.WriteLine("Введен обратный диапазон! ERROR!");
-            }
-            else
-            {
-                Console.WriteLine("____");
-                Console.WriteLine($"Сумма чисел: {res_4_4}");
-            }
+
+            Console.WriteLine("____");
+            Console.WriteLine($"Сумма чисел: {res_4_4}");
+
             Console.ReadKey();
             Console.Clear();
 
             // Task 5
-            double input_4_5 = IOHelper.InputDouble("Введите число A: ");
-            double input_4_5_1 = IOHelper.InputDouble("Введите число B: ");
-            double res_4_5 = Homework4.Task5(input_4_5, input_4_5_1);
+            int input_4_5 = IOHelper.InputInt("Введите число A");
+            int input_4_5_1 = IOHelper.InputInt("Введите число B");
+            int res_4_5 = Homework4.Task5(input_4_5, input_4_5_1);
             Console.WriteLine($"Наибольший делитель: {res_4_5}");
             Console.ReadKey();
             Console.Clear();
@@ -241,8 +235,8 @@ namespace DevEduc_all1_6
 
             // Task 7 
             int input_4_7 = IOHelper.InputInt("Введите целое число от 5 до 8 цифр");
-            Homework4.Task7(input_4_7);
-            // Тут нужен LIST для работы. Уточнить по его использованию.
+            int res_4_7 = Homework4.Task7(input_4_7);
+            Console.WriteLine($"Нечетных чисел: {res_4_7}");
             Console.ReadKey();
             Console.Clear();
 
@@ -258,17 +252,18 @@ namespace DevEduc_all1_6
             Console.WriteLine("----------");
             Homework4.Task9(input_4_9);
             // Нужен вновь LIST.
-            //Console.ReadKey();
-            //Console.Clear();
+            Console.ReadKey();
+            Console.Clear();
 
 
             // Task 10
             int input_4_10 = IOHelper.InputInt("Введите целое число: ");
             int input_4_10_1 = IOHelper.InputInt("Введите еще целое число: ");
             Console.WriteLine("----------");
-            Homework4.Task10(input_4_10, input_4_10_1);
-            // Нужен вновь LIST.
-
+            string res_4_10 = Homework4.Task10(input_4_10, input_4_10_1);
+            Console.WriteLine(res_4_10);
+            Console.ReadKey();
+            Console.Clear();
 
             //******************************************
             // Homework 5
@@ -356,16 +351,14 @@ namespace DevEduc_all1_6
             Console.Clear();
 
             // Task 2
-            int[,] input_6_2 = new int[9, 9];
-            int[,] res_6_2 = Homework6.Task2(input_6_2);
+            int[,] res_6_2 = Homework6.Task2(IOHelper.Array2dEmptyInt(9, 9));
             IOHelper.Write2DArray(res_6_2);
             Console.ReadKey();
             Console.Clear();
 
             // Task 3
             // Если указать не симметричный размер 8 на 9 например, работать не будет нормально.
-            int[,] input_6_3 = new int[9, 9];
-            int[,] res_6_3 = Homework6.Task3(input_6_3);
+            int[,] res_6_3 = Homework6.Task3(IOHelper.Array2dEmptyInt(9, 9));
             IOHelper.Write2DArray(res_6_3);
             Console.ReadKey();
             Console.Clear();
@@ -376,7 +369,19 @@ namespace DevEduc_all1_6
             Console.Clear();
 
             // Task 5
-            Homework6.Task5();
+            var res_6_5 = Homework6.Task5();
+
+            Console.ForegroundColor = ConsoleColor.Green;
+            Console.WriteLine("\n\nРезультаты решения задачи:");
+            Console.ResetColor(); // сбрасываем в стандартный
+
+            for (int i = 0; i < 10; i++)
+            {
+                Console.WriteLine($"Магазин {i + 1} - " +
+                $"Суммарный доход: {res_6_5.Item1[i]:f2}\t " +
+                $"Средний доход: {res_6_5.Item1[i] / 6:f2}\t " +
+                $"Доход - Min:{res_6_5.Item2[i, 0]:f2} |  Max:{res_6_5.Item2[i, 1]:f2}");
+            }
             Console.ReadKey();
             Console.Clear();
 
@@ -389,7 +394,7 @@ namespace DevEduc_all1_6
             Console.Clear();
 
             // Task 7
-            int[,] res_6_7 = Homework6.Task7(IOHelper.Array2EmptyInt(7, 7));
+            int[,] res_6_7 = Homework6.Task7(IOHelper.Array2dEmptyInt(7, 7));
             IOHelper.Write2DArray(res_6_7);
             Console.ReadKey();
             Console.Clear();

@@ -67,7 +67,7 @@ namespace DevEduc_all1_6
         }
 
         // Пустой Двумерный рандомный массив.
-        public static int[,] Array2EmptyInt(int line, int сolumns)
+        public static int[,] Array2dEmptyInt(int line, int сolumns)
         {
             // line - строка. сolumns - столбец 
             int[,] mas = new int[line, сolumns];
