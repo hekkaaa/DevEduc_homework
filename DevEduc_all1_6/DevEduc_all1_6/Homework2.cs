@@ -6,16 +6,18 @@ using System.Threading.Tasks;
 
 namespace DevEduc_all1_6
 {
-    class Homework2
+    public class Homework2
     {
 
         public static (int,int,int,int) Task1()
         {
             // Задание 1
+
             const int mainNumber = 876;
-            int number1 = mainNumber % 10;
+            int number1 = mainNumber / 100;
+            int number3 = mainNumber % 10;
             int number2 = (mainNumber % 100) / 10;
-            int number3 = mainNumber / 100;
+            
             return (mainNumber, number1, number2, number3);
             
         }

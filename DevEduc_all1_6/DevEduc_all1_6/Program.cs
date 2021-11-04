@@ -16,9 +16,7 @@ namespace DevEduc_all1_6
             // Homework1
 
             // Task1
-            Console.WriteLine($"Привет, {Homework1.Task1().Item1}");
-            Console.WriteLine($"{Homework1.Task1().Item1} + {Homework1.Task1().Item2} = {Homework1.Task1().Item1 + Homework1.Task1().Item2}");
-            Console.Write($"Пока, {Homework1.Task1().Item2}");
+            Console.WriteLine(Homework1.Task1());
             Console.ReadKey();
             Console.Clear();
 

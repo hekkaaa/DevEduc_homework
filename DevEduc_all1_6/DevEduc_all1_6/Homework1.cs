@@ -6,16 +6,18 @@ using System.Threading.Tasks;
 
 namespace DevEduc_all1_6
 {
-    class Homework1
+    public class Homework1
     {
 
-         public static (int,double) Task1()
+         public static string Task1()
         {
             // Задание 1
 
             int a = 3;
             double b = 5.0;
-            return (a,b);
+            return $"привет, {a}!\n" +
+                $"{a} + {b} = {a + b}\n" +
+                $"пока, {b}...";
         }
 
         public static double Task2(double a, double b)
@@ -35,10 +37,10 @@ namespace DevEduc_all1_6
             return (s1, s2);     
         }
 
-        public static double Task4(int a , int b , int c)
+        public static string Task4(int a , int b , int c)
         {       // Задание 4 
             double x = (double)(c - b) / a;
-            return x; 
+            return $"{a}*{x}+{b}={c}"; 
         }
 
         public static (int, int) Task5(int x1, int y1, int x2, int y2)
