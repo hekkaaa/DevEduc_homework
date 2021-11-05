@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace DevEduc_all1_6
 {   
-    class Homework5
+    public class Homework5
     {
         static Random rnd = new Random();
         public static (int,int) Task1(int[] mas)
