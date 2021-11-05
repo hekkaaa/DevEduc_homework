@@ -37,10 +37,11 @@ namespace DevEduc_all1_6
             return (s1, s2);     
         }
 
-        public static string Task4(int a , int b , int c)
-        {       // Задание 4 
+        public static double Task4(int a, int b, int c)
+        {  // Задание 4
+
             double x = (double)(c - b) / a;
-            return $"{a}*{x}+{b}={c}"; 
+            return x;
         }
 
         public static (int, int) Task5(int x1, int y1, int x2, int y2)
