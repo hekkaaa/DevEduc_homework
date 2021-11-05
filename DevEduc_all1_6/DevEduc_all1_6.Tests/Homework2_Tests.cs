@@ -6,7 +6,6 @@ namespace DevEduc_all1_6.Tests
     {
 
         [Test]
-        
         public void Task1_Tests()
         {
             Assert.AreEqual((876,8,7,6), Homework2.Task1());
@@ -22,16 +21,31 @@ namespace DevEduc_all1_6.Tests
             Assert.AreEqual(expected, Homework2.Task2(a, b));
         }
 
-
         [TestCase(144, false)]
         [TestCase(147, false)]
         [TestCase(773, true)]
         [TestCase(755, false)]
         [TestCase(742, true)]
-
         public void Task3_Tests(int a, bool expected)
         {
             Assert.AreEqual((a, expected), Homework2.Task3(a));
+        }
+
+        [TestCase(778, 877)]
+        [TestCase(147, 741)]
+        [TestCase(773, 377)]
+        [TestCase(755, 557)]
+        [TestCase(870, 78)]
+        public void Task4_Tests(int a, int expected)
+        {
+            Assert.AreEqual((a, expected), Homework2.Task4(a));
+        }
+
+
+        [Test]
+        public void Task5_Tests()
+        {
+            Assert.AreEqual((156, true), Homework2.Task5());
         }
     }
 }

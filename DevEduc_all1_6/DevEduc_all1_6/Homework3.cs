@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace DevEduc_all1_6
 {
-    class Homework3
+    public class Homework3
     {
         public static double Task1(double a, double b)
         {
@@ -28,30 +28,13 @@ namespace DevEduc_all1_6
             }
         }
 
-        public static string Task2(double x, double y)
+        public static int Task2(double x, double y)
         {
-            if (x > 0 && y > 0)
-            {   
-                return "Результат: 1 четверть";
-                
-            }
-            else if (x < 0 && y > 0)
-            {
-                return "Результат: 4 четверть";
-            }
-            else if (x < 0 && y < 0)
-            {
-                return "Результат: 3 четверть";
-            }
-            else if (x > 0 && y < 0)
-            {
-                return "Результат: 2 четверть";
-            }
-            else
-            {
-                return 
-                    "Вы указали 0 в одном из координат. По этому определить четверть затруднительно.";
-            }
+            if (x > 0 && y > 0) return 1;
+            else if (x < 0 && y > 0) return 4;
+            else if (x < 0 && y < 0) return 3;
+            else if (x > 0 && y < 0) return 2;
+            else return 0;
         }
         public static string Task3( double a, double b, double c )
         {
@@ -95,18 +78,18 @@ namespace DevEduc_all1_6
 
             if (D < 0)
             {
-                return "Корней уровнения нет";
+                return "Корней уравнения нет";
             }
             else if (D == 0)
             {
                 double x = (-b + Math.Sqrt(D)) / 2 * a;
-                return $"Корень уровнения: {x}";
+                return $"Корень уравнения: {x}";
             }
             else
             {
                 double x1 = (-b + Math.Sqrt(D)) / 2 * a;
                 double x2 = (-b - Math.Sqrt(D)) / 2 * a;
-                return $"2 корня уровнения: {x1} и {x2}";
+                return $"2 корня уравнения: {x1} и {x2}";
             }
         }
 
@@ -126,31 +109,31 @@ namespace DevEduc_all1_6
                     switch (num2)
                     {
                         case 1:
-                            return "Одиннадцать";
+                            return "одиннадцать";
 
                         case 2:
-                            return "Двенадцать";
+                            return "двенадцать";
 
                         case 3:
-                            return "Тринадцать";
+                            return "тринадцать";
 
                         case 4:
-                            return "Четырнадцать";
+                            return "четырнадцать";
 
                         case 5:
-                            return "Пятнадцать";
+                            return "пятнадцать";
 
                         case 6:
-                            return "Шестнадцать";
+                            return "шестнадцать";
 
                         case 7:
-                            return "Семнадцать";
+                            return "семнадцать";
 
                         case 8:
-                            return "Восемнадцать";
+                            return "восемнадцать";
 
                         case 9:
-                            return "Девятнадцать";
+                            return "девятнадцать";
 
                     }
                     break;
@@ -223,7 +206,7 @@ namespace DevEduc_all1_6
             }
             if (flag)
             {
-                return $"--------\nОтвет: {resNum1} {resNum2}";
+                return $"{resNum1} {resNum2}";
             }
             return ""; // Заглушка.
         }
