@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace DevEduc_all1_6
 {
-    class Homework4
+    public class Homework4
     {
         public static void Task1(double a)
         {
@@ -24,7 +24,7 @@ namespace DevEduc_all1_6
             double n = 0;
             int count = 1;
 
-            while (n <= a)
+            while (n < a)
             {
                 n = count * count;
 
@@ -44,12 +44,7 @@ namespace DevEduc_all1_6
 
         public static int Task3(double a)
         {
-            int res = 0;
-            for (int i = (int)a / 2; i <= a / 2; i--)
-            {
-                res = i;
-                break;
-            }
+            int res = (int)a / 2;
             return res;
         }
 
