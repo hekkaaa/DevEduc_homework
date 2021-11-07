@@ -280,71 +280,71 @@ namespace DevEduc_all1_6
             //Console.ReadKey();
             //Console.Clear();
 
-            // Task 2
-            int[] input_5_2 = IOHelper.ArrayRandomInt(40, 1, 100);
-            Homework5.Task2(input_5_2);
-            //LIST ?
+            //// Task 2
+            //int[] input_5_2 = IOHelper.ArrayRandomInt(40, 1, 100);
+            //int[] res_5_2 = Homework5.Task2(input_5_2);
+            //IOHelper.WriteArray(res_5_2);
+            //Console.ReadKey();
+            //Console.Clear();
+
+            //// Task 3
+            //int[] input_5_3 = IOHelper.ArrayRandomInt(6, 1, 10);
+            //int[] input_5_3_1 = IOHelper.ArrayRandomInt(6, 1, 20);
+            //int[] res_5_3 = Homework5.Task3(input_5_3, input_5_3_1);
+            //Console.WriteLine("\nНовый массив: ");
+            //IOHelper.WriteArray(res_5_3);
+            //Console.WriteLine();
+            //Console.ReadKey();
+            //Console.Clear();
+
+            //// Task 4
+            //int[] input_5_4 = IOHelper.ArrayRandomInt(12, 1, 100);
+            //int[] res_5_4 = Homework5.Task4(input_5_4);
+            //Console.Write("Новый массив: ");
+            //IOHelper.WriteArray(res_5_4);
+            //Console.ReadKey();
+            //Console.Clear();
+
+            //// Task 5
+            //var res_5_5 = Homework5.Task5(2);
+            //Console.Write("Со смещением на 1 позинию: ");
+            //IOHelper.WriteArray(res_5_5.Item1);
+            //// В задании стоит: А после этого сделать циклический сдвиг вправо на N элементов.
+            //// Т.е мы двигаем уже сдвинутый на 1 позицию ранее массив.
+            //Console.Write($"\nПосле смещений на N позиций: ");
+            //IOHelper.WriteArray(res_5_5.Item2);
+            //Console.ReadKey();
+            //Console.Clear();
+
+            //// Task 6
+            //int[] res_5_6 = Homework5.Task6(IOHelper.ArrayRandomInt(13, 1, 40));
+            //Console.Write("Новый массив: ");
+            //IOHelper.WriteArray(res_5_6);
+            //Console.ReadKey();
+            //Console.Clear();
+
+            //// Task 7
+            //var res_5_7 = Homework5.Task7(IOHelper.ArrayRandomInt(10, -15, 40));
+            //Console.WriteLine($"Сумма результата после 0 = {res_5_7.Item2}");
+            //Console.WriteLine($"Минимально значение: {res_5_7.Item1}");
+            //Console.ReadKey();
+            //Console.Clear();
+
+            //// Task 8
+            //int[] input_5_8 = IOHelper.ArrayRandomInt(10, 1, 100);
+            //int[] res_5_8 = Homework5.Task8(input_5_8);
+            //Console.Write("\nРезультат: ");
+            //IOHelper.WriteArray(res_5_8);
+            //Console.ReadKey();
+            //Console.Clear();
+
+            // Task 9
+            int[] input_5_9 = IOHelper.ArrayRandomInt(10, 1, 100);
+            int[] res_5_9 = Homework5.Task9(input_5_9);
+            Console.Write("\nРезультат: ");
+            IOHelper.WriteArray(res_5_9);
             Console.ReadKey();
             Console.Clear();
-
-            //    // Task 3
-            //    int[] input_5_3 = IOHelper.ArrayRandomInt(6, 1, 10);
-            //    int[] input_5_3_1 = IOHelper.ArrayRandomInt(6, 1, 20);
-            //    int[] res_5_3 = Homework5.Task3(input_5_3, input_5_3_1);
-            //    Console.WriteLine("\nНовый массив: ");
-            //    IOHelper.WriteArray(res_5_3);
-            //    Console.WriteLine();
-            //    Console.ReadKey();
-            //    Console.Clear();
-
-            //    // Task 4
-            //    int[] input_5_4 = IOHelper.ArrayRandomInt(12, 1, 100);
-            //    int[] res_5_4 = Homework5.Task4(input_5_4);
-            //    Console.Write("Новый массив: ");
-            //    IOHelper.WriteArray(res_5_4);
-            //    Console.ReadKey();
-            //    Console.Clear();
-
-            //    // Task 5
-            //    var res_5_5 = Homework5.Task5(4);
-            //    Console.Write("Со смещением на 1 позинию: ");
-            //    IOHelper.WriteArray(res_5_5.Item1);
-            //    // В задании стоит: А после этого сделать циклический сдвиг вправо на N элементов.
-            //    // Т.е мы двигаем уже сдвинутый на 1 позицию ранее массив.
-            //    Console.Write($"\nПосле смещений на N позиций: ");
-            //    IOHelper.WriteArray(res_5_5.Item2);
-            //    Console.ReadKey();
-            //    Console.Clear();
-
-            //    // Task 6
-            //    int[] res_5_6 = Homework5.Task6();
-            //    Console.Write("Новый массив: ");
-            //    IOHelper.WriteArray(res_5_6);
-            //    Console.ReadKey();
-            //    Console.Clear();
-
-            //    // Task 7
-            //    var res_5_7 = Homework5.Task7();
-            //    Console.WriteLine($"Сумма результата после 0 = {res_5_7.Item1}");
-            //    Console.WriteLine($"Минимально значение: {res_5_7.Item2}");
-            //    Console.ReadKey();
-            //    Console.Clear();
-
-            //    // Task 8
-            //    int[] input_5_8 = IOHelper.ArrayRandomInt(10, 1, 100);
-            //    int[] res_5_8 = Homework5.Task8(input_5_8);
-            //    Console.Write("\nРезультат: ");
-            //    IOHelper.WriteArray(res_5_8);
-            //    Console.ReadKey();
-            //    Console.Clear();
-
-            //    // Task 9
-            //    int[] input_5_9 = IOHelper.ArrayRandomInt(10, 1, 100);
-            //    int[] res_5_9 = Homework5.Task9(input_5_9);
-            //    Console.Write("\nРезультат: ");
-            //    IOHelper.WriteArray(res_5_9);
-            //    Console.ReadKey();
-            //    Console.Clear();
 
             //    //******************************************
             //    // Homework 6

@@ -31,16 +31,18 @@ namespace DevEduc_all1_6
             return (countEven, countOdd);
         }
 
-        public static void Task2(int[] mas)
+        public static int[] Task2(int[] mas)
         {   // Задание 2
 
-            for (int i = 2; i < mas.Length; i += 2)
+            for (int i = 2; i < mas.Length; i += 3)
             {
-                int oldResult = mas[i];
+                // Для наглядности операций
+                //int oldResult = mas[i];
                 mas[i] = mas[i - 1] + mas[i - 2];
-
-                Console.WriteLine($"Index:{i} | Old_Result:{oldResult} / New_Result:{mas[i]}");
+                
+                //Console.WriteLine($"Index:{i+1} | Old_Result:{oldResult} / New_Result:{mas[i]}"); 
             }
+            return mas;
         }
 
         public static int[] Task3( int[] a, int[] b)
@@ -75,8 +77,6 @@ namespace DevEduc_all1_6
                 count++;
             }
             return resultMassive;
-            
-           
         }
 
         public static (int[],int[]) Task5(int N)
@@ -96,7 +96,7 @@ namespace DevEduc_all1_6
             int[] newmas = new int[mas.Length];
             mas.CopyTo(newmas, 0);
 
-            // Цикл для смещения
+            // Цикл для смещения 
             while (count <= N)
             {
                 lastNum = newmas[newmas.Length - 1];
@@ -110,23 +110,32 @@ namespace DevEduc_all1_6
             return (mas, newmas);
         }
 
-        public static int[] Task6()
+        public static int[] Task6(int[] mas)
         { // Задание 6
-            int[] mas = { 1, 2, 3, 4, 5, 6, 7, 8 };
-            for (int i = 0; i < mas.Length; i += 2)
-            {
-                int tmp = mas[i];
-                mas[i] = mas[i + 1];
-                mas[i + 1] = tmp;
+         
+            for (int i = 0; i < mas.Length-1; i++)
+            {   
+                    if(mas[i] % 2 == 0 && mas[i+1] % 2 != 0)
+                    {
+                        int tmp = mas[i];
+                        mas[i] = mas[i + 1];
+                        mas[i + 1] = tmp;
+                    }
+                    else if (mas[i] % 2 != 0 && mas[i + 1] % 2 == 0)
+                    {
+                        int tmp = mas[i];
+                        mas[i] = mas[i + 1];
+                        mas[i + 1] = tmp;
+                    }  
             }
             return mas;
         }
 
-        public static (int,int) Task7()
+        public static (int,int) Task7(int[] mas)
         { // Задача 7
 
             // В задаче указано что отрицательные значения будут ВКЛЮЧИТЕЛЬНО
-            int[] mas = { 5, 15, -2, 3, -1, 8, -10, 0, 1, 10, 4, -6, 1, 20 };
+            //int[] mas = { 5, 15, -2, 3, -1, 8, -10, 0, 1, 10, 4, -6, 1, 20 };
             int min = 0; // для поиска минимального значения.
             int res = 0; // для суммы чисел после 0
 
@@ -147,7 +156,7 @@ namespace DevEduc_all1_6
                     }
                 }
             }
-            return (res, min);  
+            return (min, res);  
         }
 
         public static int[] Task8(int[] mas)
