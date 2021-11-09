@@ -324,7 +324,7 @@ namespace DevEduc_all1_6
             //Console.Clear();
 
             //// Task 7
-            //var res_5_7 = Homework5.Task7(IOHelper.ArrayRandomInt(10, -15, 40));
+            //var res_5_7 = Homework5.Task7(IOHelper.ArrayRandomInt(10, -10, 20));
             //Console.WriteLine($"Сумма результата после 0 = {res_5_7.Item2}");
             //Console.WriteLine($"Минимально значение: {res_5_7.Item1}");
             //Console.ReadKey();
@@ -338,86 +338,88 @@ namespace DevEduc_all1_6
             //Console.ReadKey();
             //Console.Clear();
 
-            // Task 9
-            int[] input_5_9 = IOHelper.ArrayRandomInt(10, 1, 100);
-            int[] res_5_9 = Homework5.Task9(input_5_9);
-            Console.Write("\nРезультат: ");
-            IOHelper.WriteArray(res_5_9);
-            Console.ReadKey();
-            Console.Clear();
+            //// Task 9
+            //int[] input_5_9 = IOHelper.ArrayRandomInt(10, 1, 100);
+            //int[] res_5_9 = Homework5.Task9(input_5_9);
+            //Console.Write("\nРезультат: ");
+            //IOHelper.WriteArray(res_5_9);
+            //Console.ReadKey();
+            //Console.Clear();
 
             //    //******************************************
             //    // Homework 6
 
-            //    // Task 1
-            //    int[,] res_6_1 = Homework6.Task1(IOHelper.array2DRandomInt(5, 8, -99, 40));
-            //    IOHelper.Write2DArray(res_6_1);
-            //    Console.ReadKey();
-            //    Console.Clear();
+            //// Task 1
+            //int[,] res_6_1 = Homework6.Task1(IOHelper.array2DRandomInt(5, 8, -99, 40));
+            //IOHelper.Write2DArray(res_6_1);
+            //Console.ReadKey();
+            //Console.Clear();
 
-            //    // Task 2
-            //    int[,] res_6_2 = Homework6.Task2(IOHelper.Array2dEmptyInt(9, 9));
-            //    IOHelper.Write2DArray(res_6_2);
-            //    Console.ReadKey();
-            //    Console.Clear();
+            //// Task 2
+            //int[,] res_6_2 = Homework6.Task2(IOHelper.Array2dEmptyInt(3, 4));
+            //IOHelper.Write2DArray(res_6_2);
+            //Console.ReadKey();
+            //Console.Clear();
 
-            //    // Task 3
-            //    // Если указать не симметричный размер 8 на 9 например, работать не будет нормально.
-            //    int[,] res_6_3 = Homework6.Task3(IOHelper.Array2dEmptyInt(9, 9));
-            //    IOHelper.Write2DArray(res_6_3);
-            //    Console.ReadKey();
-            //    Console.Clear();
+            //// Task 3
+            //// Если указать не симметричный размер 8 на 9 например, работать не будет нормально.
+            //int[,] res_6_3 = Homework6.Task3(IOHelper.Array2dEmptyInt(9, 9));
+            //IOHelper.Write2DArray(res_6_3);
+            //Console.ReadKey();
+            //Console.Clear();
 
-            //    // Task 4
-            //    Homework6.Task4(IOHelper.array2DRandomInt(5, 8, 0, 2));
-            //    Console.ReadKey();
-            //    Console.Clear();
+            //// Task 4
+            //bool res_6_4 = Homework6.Task4(IOHelper.array2DRandomInt(6, 6, 0, 2));
+            //if (res_6_4)
+            //{
+            //    Console.WriteLine("\nНайдены рядом сидящие посетители");
+            //}
+            //else
+            //{
+            //    Console.WriteLine("\nВсе нормы соблюдены");
+            //}
+            //Console.ReadKey();
+            //Console.Clear();
 
-            //    // Task 5
-            //    var res_6_5 = Homework6.Task5();
+            //// Task 5
+            //var res_6_5 = Homework6.Task5(IOHelper.Array2dEmptyDoble(10,6));
 
-            //    Console.ForegroundColor = ConsoleColor.Green;
-            //    Console.WriteLine("\n\nРезультаты решения задачи:");
-            //    Console.ResetColor(); // сбрасываем в стандартный
+            //Console.ForegroundColor = ConsoleColor.Green;
+            //Console.WriteLine("\n\nРезультаты решения задачи:");
+            //Console.ResetColor(); // сбрасываем в стандартный
 
-            //    for (int i = 0; i < 10; i++)
-            //    {
-            //        Console.WriteLine($"Магазин {i + 1} - " +
-            //        $"Суммарный доход: {res_6_5.Item1[i]:f2}\t " +
-            //        $"Средний доход: {res_6_5.Item1[i] / 6:f2}\t " +
-            //        $"Доход - Min:{res_6_5.Item2[i, 0]:f2} |  Max:{res_6_5.Item2[i, 1]:f2}");
-            //    }
-            //    Console.ReadKey();
-            //    Console.Clear();
+            //for (int i = 0; i < 10; i++)
+            //{
+            //    Console.WriteLine($"Магазин {i + 1} - " +
+            //    $"Суммарный доход: {res_6_5.Item1[i]:f2}\t " +
+            //    $"Средний доход: {res_6_5.Item1[i] / 6:f2}\t " +
+            //    $"Доход - Min:{res_6_5.Item2[i, 0]:f2} |  Max:{res_6_5.Item2[i, 1]:f2}");
+            //}
+            //Console.ReadKey();
+            //Console.Clear();
 
-            //    // Task 6
-            //    int res_6_6 = Homework6.Task6(IOHelper.array2DRandomInt(12, 12, -10, 50));
-            //    Console.ForegroundColor = ConsoleColor.Green;
-            //    Console.WriteLine($"\nРезультат: {res_6_6}");
-            //    Console.ResetColor(); // сбрасываем в стандартный
-            //    Console.ReadKey();
-            //    Console.Clear();
+            //// Task 6
+            //int res_6_6 = Homework6.Task6(IOHelper.array2DRandomInt(6, 6, -10, 50));
+            //Console.ForegroundColor = ConsoleColor.Green;
+            //Console.WriteLine($"\nРезультат: {res_6_6}");
+            //Console.ResetColor(); // сбрасываем в стандартный
+            //Console.ReadKey();
+            //Console.Clear();
 
-            //    // Task 7
-            //    int[,] res_6_7 = Homework6.Task7(IOHelper.Array2dEmptyInt(7, 7));
-            //    IOHelper.Write2DArray(res_6_7);
-            //    Console.ReadKey();
-            //    Console.Clear();
+            //// Task 7
+            //int[,] res_6_7 = Homework6.Task7(IOHelper.Array2dEmptyInt(7, 7));
+            //IOHelper.Write2DArray(res_6_7);
+            //Console.ReadKey();
+            //Console.Clear();
 
-            //    // Task 8
-            //    int[,] input_6_8 = IOHelper.array2DRandomInt(5, 5, 1, 20);
-            //    int[,] input_6__1 = IOHelper.array2DRandomInt(5, 5, 1, 20);
-            //    var res_6_8 = Homework6.Task8(input_6_8, input_6__1);
-            //    if (res_6_8.Item2 == true)
-            //    {
-            //        Console.WriteLine("Матрицы не могут быть перемножены");
-            //    }
-            //    else
-            //    {
-            //        IOHelper.Write2DArray(res_6_8.Item1);
-            //    }
-            //    Console.ReadKey();
-            //    Console.Clear();
+            //// Task 8
+            //int[,] input_6_8 = IOHelper.array2DRandomInt(3, 3, 1, 20);
+            //int[,] input_6__1 = IOHelper.array2DRandomInt(3, 2, 1, 20);
+            //var res_6_8 = Homework6.Task8(input_6_8, input_6__1);
+            //IOHelper.Write2DArray(res_6_8);
+
+            //Console.ReadKey();
+            //Console.Clear();
         }
     }
 }

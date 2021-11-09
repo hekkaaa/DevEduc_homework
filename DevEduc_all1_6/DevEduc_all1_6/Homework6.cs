@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace DevEduc_all1_6
 {
-    class Homework6
+    public class Homework6
     {
         public static int[,] Massive(int line, int сolumns, int rangeStart, int rangeEnd)
         {
@@ -101,10 +101,14 @@ namespace DevEduc_all1_6
             return mas;
         }
 
-        public static void Task4(int[,] massive)
-        {
-            Console.WriteLine();
-            Console.Write("Результат: ");
+        public static bool Task4(int[,] massive)
+        {   
+            // Задание 4
+
+            // *** Раскомментировать все Console, если нужно отображения массива с цветами пар нарушителей.
+            //Console.WriteLine();
+            //Console.Write("Результат: ");
+            bool flag = false;
             for (int i = 0; i < massive.GetLength(0); i++)
             {
                 Console.WriteLine();
@@ -116,46 +120,27 @@ namespace DevEduc_all1_6
 
                         if (massive[i, j] == 1 && (massive[i, j] == massive[i, j - 1] || massive[i, j] == massive[i, j + 1]))
                         {
-                            Console.ForegroundColor = ConsoleColor.Red;
-                            Console.Write($"{massive[i, j]}\t");
-                            Console.ResetColor();
-
+                            //Console.ForegroundColor = ConsoleColor.Red;
+                            //Console.Write($"{massive[i, j]}\t");
+                            //Console.Write($"{massive[i, j+1]}\t");
+                            //Console.ResetColor();
+                            return flag = true;
                             //break; // Для условия остановки цикла по ТЗ
                         }
-                        else
-                        {
-                            Console.Write($"{massive[i, j]}\t");
-                        }
+                        else Console.Write($"{massive[i, j]}\t");
                     }
-                    else
-                    {
-                        Console.Write($"{massive[i, j]}\t");
-                    }
-
+                    else Console.Write($"{massive[i, j]}\t");
                 }
-                //break; // Для условия остановки цикла по ТЗ
             }
+            return flag;
         }
 
-        public static (double[], double[,]) Task5()
+        public static (double[], double[,]) Task5(double[,] massive)
         {   // Задание 5
 
-            // Создание таблицы 10 магазинов.
-            double[,] massive = new double[10, 6];
-            Random rnd = new Random();
-            Console.Write("Массив: ");
-            for (int i = 0; i < massive.GetLength(0); i++)
-            {
-                Console.WriteLine();
-                for (int j = 0; j < massive.GetLength(1); j++)
-                {
-                    massive[i, j] = rnd.NextDouble() * rnd.Next(100, 645);
-                    Console.Write($"{massive[i, j]:f2}\t");
-                }
-            }
             // массывы для return
             double[] mas_totalCash = new double[10];
-            double[,] mas_MinMax = new double[10, 6];
+            double[,] mas_MinMax = new double[10, 2];
 
             for (int i = 0; i < massive.GetLength(0); i++)
             {
@@ -168,8 +153,8 @@ namespace DevEduc_all1_6
                     // суммарный доход по магазинам
                     totalCash += massive[i, j];
                     // Захотелось сделать тернарный для красоты кода.
-                    minCash = massive[i, j] < minCash ? minCash = massive[i, j] : minCash;
-                    maxCash = massive[i, j] > maxCash ? maxCash = massive[i, j] : maxCash;
+                    minCash = massive[i, j] < minCash ? massive[i, j] : minCash;
+                    maxCash = massive[i, j] > maxCash ? massive[i, j] : maxCash;
                 }
                 // фиксируем результаты.
                 mas_totalCash[i] = totalCash;
@@ -180,7 +165,8 @@ namespace DevEduc_all1_6
         }
 
         public static int Task6(int[,] massive)
-        {
+        {   // Задание 6
+            
             int count = 0;
             for (int i = 0; i < massive.GetLength(0); i++)
             {
@@ -222,16 +208,15 @@ namespace DevEduc_all1_6
             return mas;
         }
 
-        public static (int[,],bool) Task8(int[,] a, int[,] b)
+        public static int[,] Task8(int[,] a, int[,] b)
         {   // Задание 8
-            bool flag_error = false;
+
             // Создаем матрицу для складывания результата.
             int[,] c = new int[a.GetLength(0), b.GetLength(1)];
 
-            if (a.GetLength(0) != b.GetLength(1))
+            if (a.GetLength(0) > b.GetLength(1) || a.GetLength(0) != a.GetLength(1))
             {
-                flag_error = true;
-                return (c ,flag_error);
+                throw new IndexOutOfRangeException(); 
             }
             else
             {
@@ -246,7 +231,7 @@ namespace DevEduc_all1_6
                         }
                     }
                 }
-                return (c, flag_error);
+                return (c);
             }
 
         }

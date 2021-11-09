@@ -59,7 +59,7 @@ namespace DevEduc_all1_6
                 for (int j = 0; j < mas.GetLength(1); j++)
                 {
                     mas[i, j] = rnd.Next(rangeStart, rangeEnd);
-                    Console.Write($"{mas[i, j]}\t");
+                    Console.Write($"{mas[i, j]},");
                 }
                 Console.WriteLine();
             }
@@ -91,11 +91,32 @@ namespace DevEduc_all1_6
             {
                 for (int j = 0; j<massive.GetLength(1); j++)
                 {
-                    Console.Write($"{massive[i, j]}\t");
+                    Console.Write($"{massive[i, j]},");
                 }
                 Console.WriteLine();
             }
         }
+
+        // Выводит в консоль двумерный массив Double.
+        public static double[,] Array2dEmptyDoble(int line, int сolumns)
+        {
+            // Создание таблицы 10 магазинов.
+            double[,] massive = new double[line, сolumns];
+            Random rnd = new Random();
+            Console.Write("Массив: ");
+            for (int i = 0; i < massive.GetLength(0); i++)
+            {
+                Console.WriteLine();
+                for (int j = 0; j < massive.GetLength(1); j++)
+                {
+                    massive[i, j] = rnd.NextDouble() * rnd.Next(100, 645);
+                    Console.Write($"{massive[i, j]:f2}\t");
+                }
+            }
+            return massive;
+        }
+
+
 
         // *** Оставлю на всякий случай. В ДЗ не используется.
         //private static void TestRandomArray(int minLenght, int maxLenght, int minRnd, int maxRnd)

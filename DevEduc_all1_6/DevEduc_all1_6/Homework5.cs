@@ -18,8 +18,8 @@ namespace DevEduc_all1_6
 
             for (int i = 0; i < mas.Length; i++)
             {
-                int res = mas[i] % 2;
-                if (res == 0)
+              
+                if (mas[i] % 2 == 0)
                 {
                     countEven++;
                 }
@@ -48,22 +48,27 @@ namespace DevEduc_all1_6
         public static int[] Task3( int[] a, int[] b)
         {   // Задание 3       
 
-            int[] z = new int[a.Length + b.Length]; // устанавливаем длинну
-            a.CopyTo(z, 0);
-            b.CopyTo(z, a.Length); // копируем с 5 индекса.
-            // PROFIT!
+            int[] z = new int[a.Length + b.Length]; // устанавливаем длинну.
+
+            for (int i = 0; i < a.Length; i++)
+            {
+                z[i] = a[i];
+            }
+            for (int i = a.Length; i < z.Length; i++)
+            {
+                z[i] = b[i - a.Length];
+            }
             return z;
         }
 
         public static int[] Task4(int[] mas)
         {   // Задание 4
 
-            int center = mas.Length / 2; // получаем "условную" середину массив
             int[] resultMassive = new int[mas.Length]; // новый массив. 
             int count = 0; // счетчик.
 
             // вторая половинка массива mas переходит в 1 часть.
-            for (int i = center; i < mas.Length; i++)
+            for (int i = mas.Length / 2; i < mas.Length; i++)
             {
                 resultMassive[count] = mas[i];
                 count++;
@@ -71,7 +76,7 @@ namespace DevEduc_all1_6
 
             // первая половинка mas переходит во 2 часть нового массива.
             // значение count не меняется.
-            for (int i = 0; i < center; i++)
+            for (int i = 0; i < mas.Length / 2; i++)
             {
                 resultMassive[count] = mas[i];
                 count++;
@@ -138,23 +143,13 @@ namespace DevEduc_all1_6
             //int[] mas = { 5, 15, -2, 3, -1, 8, -10, 0, 1, 10, 4, -6, 1, 20 };
             int min = 0; // для поиска минимального значения.
             int res = 0; // для суммы чисел после 0
+            bool flag = false;
 
             for (int i = 0; i < mas.Length; i++)
-            {   // ищем минимальное.
-                if (mas[i] < min)
-                {
-                    min = mas[i];
-                }
-                else if (mas[i] == 0)
-                {
-                    // цикл для поиска 
-                    int count = i; // счетчик для внутреннего цикла
-                    while (count < mas.Length)
-                    {
-                        res += mas[count];
-                        count++;
-                    }
-                }
+            {
+                if (mas[i] < min) min = mas[i];
+                if (mas[i] == 0) { flag = true; }
+                if (flag == true) { res += mas[i]; }
             }
             return (min, res);  
         }
