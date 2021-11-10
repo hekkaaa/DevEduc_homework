@@ -13,12 +13,12 @@ namespace DevEduc_all1_6
             ////******************************************
 
 
-            //    // Homework1
+            // Homework1
 
-            //    // Task1
-            //    Console.WriteLine(Homework1.Task1());
-            //    Console.ReadKey();
-            //    Console.Clear();
+            // Task1
+            Console.WriteLine(Homework1.Task1());
+            Console.ReadKey();
+            Console.Clear();
 
             //    // Task2
             //    double input2 = IOHelper.InputDouble("Введите число A");
@@ -189,12 +189,12 @@ namespace DevEduc_all1_6
             //    //******************************************
             //    // Homework 4
 
-            //    // Task 1
-            //    double input_4_1 = IOHelper.InputDouble("Введите число A: ");
-            //    Console.WriteLine("-----------");
-            //    Homework4.Task1(input_4_1);
-            //    Console.ReadKey();
-            //    Console.Clear();
+            // Task 1
+            double input_4_1 = IOHelper.InputDouble("Введите число A: ");
+            Console.WriteLine("-----------");
+            Homework4.Task1(input_4_1);
+            Console.ReadKey();
+            Console.Clear();
 
             //    // Task 2 
             //    double input_4_2 = IOHelper.InputDouble("Введите число A");
