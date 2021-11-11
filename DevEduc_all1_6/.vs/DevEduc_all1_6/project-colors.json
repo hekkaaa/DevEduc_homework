@@ -1,0 +1,16 @@
+{
+  "Version": 1,
+  "ProjectMap": {
+    "0689c971-af9f-44c5-aa8c-603421a911a8": {
+      "ProjectGuid": "0689c971-af9f-44c5-aa8c-603421a911a8",
+      "DisplayName": "DevEduc_all1_6",
+      "ColorIndex": 0
+    },
+    "1661d1fc-8dc1-4732-a68e-6b12c88a6509": {
+      "ProjectGuid": "1661d1fc-8dc1-4732-a68e-6b12c88a6509",
+      "DisplayName": "DevEduc_all1_6.Tests",
+      "ColorIndex": 1
+    }
+  },
+  "NextColorIndex": 2
+}

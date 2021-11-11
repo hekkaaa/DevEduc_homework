@@ -1,4 +1,5 @@
 ﻿using NUnit.Framework;
+using System;
 
 namespace DevEduc_all1_6.Tests
 {
@@ -10,6 +11,7 @@ namespace DevEduc_all1_6.Tests
         {
             Assert.AreEqual((876,8,7,6), Homework2.Task1());
         }
+
 
         [TestCase(4, 6, true)]
         [TestCase(40, 10, false)]
@@ -46,6 +48,21 @@ namespace DevEduc_all1_6.Tests
         public void Task5_Tests()
         {
             Assert.AreEqual((156, true), Homework2.Task5());
+        }
+
+
+        // NEGATIVE TESTS
+
+        [TestCase(3444)]
+        public void Task3_NegativeTests(int a)
+        {
+            Assert.Throws<ArgumentOutOfRangeException>(() => Homework2.Task3(a));
+        }
+
+        [TestCase(2342)]
+        public void Task4_NegativeTests(int a)
+        {
+            Assert.Throws<ArgumentOutOfRangeException>(() => Homework2.Task4(a));
         }
     }
 }

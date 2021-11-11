@@ -91,9 +91,18 @@ namespace DevEduc_all1_6
             {
                 for (int j = 0; j<massive.GetLength(1); j++)
                 {
-                    Console.Write($"{massive[i, j]},");
+                    Console.Write($"{massive[i, j]}\t");
                 }
                 Console.WriteLine();
+            }
+        }
+
+        // Выводит в консоль list в одну строчку.
+        public static void WriteIntList(List<int> list)
+        {
+            for (int i = 0; i < list.Count; i++)
+            {
+                Console.WriteLine($"{list[i]}");
             }
         }
 

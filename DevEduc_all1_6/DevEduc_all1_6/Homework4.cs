@@ -8,15 +8,22 @@ namespace DevEduc_all1_6
 {
     public class Homework4
     {
-        public static void Task1(double a)
-        {
+        public static List<int> Task1(double a)
+        {   
+            if(a < 1 || a > 1000)
+            {
+                throw new ArgumentOutOfRangeException();
+            }
+
+            List<int> list = new List<int>();   
             for (int i = 1; i <= 1000; i++)
             {
                 if (i % a == 0)
                 {
-                    Console.WriteLine(i);
+                    list.Add(i);
                 }
             }
+            return list;
         }
 
         public static int Task2(double a)
@@ -94,6 +101,11 @@ namespace DevEduc_all1_6
             int rightLimit = n; // правый предел
             int center = 1; // число в центре
 
+            if(n < 1)
+            {
+                throw new ArgumentOutOfRangeException();
+            }
+
             while (leftLimit != center)
             {
                 center = (leftLimit + rightLimit) / 2;
@@ -116,6 +128,11 @@ namespace DevEduc_all1_6
         public static int Task7(int a)
         {
             int count = 0; //счетчик для нечетных чисел
+
+            if (a.ToString().Length < 5 || a.ToString().Length > 8)
+            {
+                throw new ArgumentOutOfRangeException();
+            }
 
             while (a > 0)
             {
@@ -143,9 +160,15 @@ namespace DevEduc_all1_6
             return result;
         }
 
-        public static void Task9(int a)
-        {
+        public static List<int> Task9(int a)
+        {   
+            if(a < 1)
+            {
+                throw new ArgumentOutOfRangeException();
+            }
             // Главный цикл.
+            List<int> list = new List<int>();
+
             for (int i = 1; i <= a; i++)
             {
                 int circle = i; // копируем для дальнейшего использования.
@@ -167,12 +190,11 @@ namespace DevEduc_all1_6
 
                     circle /= 10; // Узнаем есть ли еще цифры в остатке.
                 }
+                
+                if (number_even > number_odd) list.Add(i);
 
-                if (number_even > number_odd)
-                    // тут дальше можно вместо list сделать Array на половину длинны верхней цифры
-                    // для решения задачи с методами.
-                    Console.WriteLine(i);
             }
+            return list;
         }
 
         public static string Task10(int a, int b)

@@ -35,6 +35,11 @@ namespace DevEduc_all1_6
         {
             // Задание 3
 
+            if(number.ToString().Length > 3 || number.ToString().Length < 2)
+            {
+                throw new ArgumentOutOfRangeException();
+            }
+            
             int numberFirst = number / 100;
             int numberCenter = (number % 100) / 10;
             int numberLast = number % 10;
@@ -46,7 +51,13 @@ namespace DevEduc_all1_6
         public static (int,int) Task4 (int mainNumber)
         {
             // Задание 4
-          
+
+
+            if (mainNumber.ToString().Length > 3 || mainNumber.ToString().Length < 2)
+            {
+                throw new ArgumentOutOfRangeException();
+            }
+
             // Разделяем цифры по одному.
             int number3 = mainNumber % 10;
             int number2 = (mainNumber % 100) / 10;

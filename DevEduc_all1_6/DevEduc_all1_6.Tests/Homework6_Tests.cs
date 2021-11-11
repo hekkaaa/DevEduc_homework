@@ -223,6 +223,8 @@ namespace DevEduc_all1_6.Tests
                     return new int[6, 4];
                 case "5":
                     return new int[2, 6];
+                case "negative":
+                    return new int[8, 5];
                 default:
                     return new int[,] { };
             }
@@ -587,6 +589,16 @@ namespace DevEduc_all1_6.Tests
                         { -7, -1, -4, 41, -3, 27 },
                         { 43, 43, -7, 38, -4, 30 }
                     };
+                case "negative":
+                    return new int[,] {
+                        { 31, 0, 18, -2, 13, -2 },
+                        { 28, 2, 41, 8, 2, 30 },
+                        { -1, -6, 27, 15, 19, 8 },
+                        { 35, 21, 42, 8, 29, -8 },
+                        { -7, -1, -4, 41, -3, 27 },
+                        { 43, 43, -7, 38, -4, 30 },
+                        { 43, 43, -7, 38, -4, 30 }
+                    };
                 default:
                     return new int[,] { };
             }
@@ -607,23 +619,12 @@ namespace DevEduc_all1_6.Tests
 
 
         // MOCK Task 7
-        int[,] GetMockTask7(string arrayType)
+      
+        [Test]
+        public void Task7_Tests()
         {
-            switch (arrayType)
-            {
-                case "1":
-                    return new int[7, 7];
-
-                default:
-                    return new int[,] { };
-            }
-        }
-        int[,] ReturnMockTask7(string expectedType)
-        {
-            switch (expectedType)
-            {
-                case "1":
-                    return new int[,] {
+            int[,] a = new int[7,7];
+            int[,] expected = new int[,] {
                        { 1,      1,      1,      1,      1,      1,      1 },
                        { 0,      1,      1,      1,      1,      1,      0 },
                        { 0,      0,      1,      1,      1,      0,      0 },
@@ -632,18 +633,9 @@ namespace DevEduc_all1_6.Tests
                        { 0,      1,      1,      1,      1,      1,      0 },
                        { 1,      1,      1,      1,      1,      1,      1 }
                     };
-                default:
-                    return new int[,] { };
-            }
-        }
 
-        [TestCase("1", "1")]
-        public void Task7_Tests(string arrayType, string expectedType)
-        {
-            int[,] a = GetMockTask7(arrayType);
-            int[,] expected = ReturnMockTask7(expectedType);
-
-            Assert.AreEqual(expected, Homework6.Task7(a));
+            int[,] actual = Homework6.Task7(a);
+            Assert.AreEqual(expected, actual);
         }
 
         // MOCK Task 8
@@ -792,6 +784,7 @@ namespace DevEduc_all1_6.Tests
             Assert.AreEqual(expected, Homework6.Task8(a,b));
         }
 
+        // NEGATIVE TESTS
 
         [TestCase("negative", "negative")]
         public void Task8_NegativeTests(string arrayType1, string arrayType2)
@@ -802,6 +795,21 @@ namespace DevEduc_all1_6.Tests
             Assert.Throws<IndexOutOfRangeException>(() => Homework6.Task8(a, b));
         }
 
+
+        [TestCase("negative")]
+        public void Task3_NegativeTests(string arrayType)
+        {
+            int[,] a = GetMockTask3(arrayType);
+            Assert.Throws<IndexOutOfRangeException>(() => Homework6.Task3(a));
+        }
+
+        [TestCase("negative")]
+        public void Task6_NegativeTests(string arrayType)
+        {
+            int[,] a = GetMockTask6(arrayType);
+            Assert.Throws<IndexOutOfRangeException>(() => Homework6.Task6(a));
+        }
+        
     }
 }
 

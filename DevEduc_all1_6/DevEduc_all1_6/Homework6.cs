@@ -76,6 +76,11 @@ namespace DevEduc_all1_6
 
         public static int[,] Task3(int[,] mas)
         {   // Задание 3
+            if(mas.GetLength(0) % 2 == 0 && mas.GetLength(1) % 2 != 0 || mas.GetLength(0) % 2 != 0 && mas.GetLength(1) % 2 == 0)
+            {
+                throw new IndexOutOfRangeException();
+            }
+           
 
             bool black = true; // черная клетка да/нет
             for (int i = mas.GetLength(0) - 1; i >= 0; i--)
@@ -166,7 +171,12 @@ namespace DevEduc_all1_6
 
         public static int Task6(int[,] massive)
         {   // Задание 6
-            
+
+            if(massive.GetLength(0) != massive.GetLength(1))
+            {
+                throw new IndexOutOfRangeException();
+            }
+
             int count = 0;
             for (int i = 0; i < massive.GetLength(0); i++)
             {
@@ -178,7 +188,7 @@ namespace DevEduc_all1_6
                     if (i != 0 && j != massive.GetLength(0) - 1 && j != 0 && i != massive.GetLength(1) - 1)
                     {
                         summa = massive[i, j - 1] + massive[i, j + 1] + massive[i - 1, j] + massive[i + 1, j];
-                        Console.Write($"{massive[i, j]}({summa})\t");
+                        //Console.Write($"{massive[i, j]}({summa})\t");
 
                         if (massive[i, j] > summa) count++;
                     }

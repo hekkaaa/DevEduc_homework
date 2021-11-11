@@ -170,7 +170,7 @@ namespace DevEduc_all1_6
                     flag = true;
                     break;
                 default:
-                    return "Введено не целое, либо не двузначное число.";
+                    throw new ArgumentOutOfRangeException();
             }
 
             string resNum2 = "";
