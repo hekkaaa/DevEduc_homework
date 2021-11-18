@@ -105,10 +105,11 @@ namespace DevEduc_all1_6
             {
                 throw new ArgumentOutOfRangeException();
             }
-
-            while (leftLimit != center)
-            {
+            // leftLimit != center && leftLimit < rightLimit - 1 // leftLimit != center 
+            while (leftLimit != center || leftLimit < rightLimit - 1 )
+            {   
                 center = (leftLimit + rightLimit) / 2;
+           
                 if (Math.Pow(center, 3) == n)
                 {
                     break;

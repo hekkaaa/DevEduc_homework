@@ -101,9 +101,9 @@ namespace DevEduc_all1_6.Tests
         [TestCase(5, 1)]
         [TestCase(8, 2)]
         [TestCase(1728, 12)]
-        [TestCase(625, 5)]
+        [TestCase(625, 8)]
         [TestCase(12, 2)]
-        public void Task6_Tests(int a,int expected)
+        public void Task6_Tests(int a, int expected)
         {
             Assert.AreEqual(expected, Homework4.Task6(a));
         }
